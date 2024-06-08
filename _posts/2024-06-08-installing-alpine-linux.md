@@ -50,7 +50,6 @@ sudo /bin/sh ./chroot.sh
 cat /etc/apk/workd
 ```
 apk add
-alpine-base
 alsa-utils
 brightnessctl
 bubblewrap
@@ -93,6 +92,8 @@ wofi
 wtype
 zathura-pdf-mupdf
 
+run setup-devd, choose mdev or udev dont install libudev-zero if you plan to use udev, which allows udev rules for autoconfig 
+ 
 
 cat .bin/s
 ```
