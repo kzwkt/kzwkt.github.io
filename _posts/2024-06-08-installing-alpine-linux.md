@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Installing alpine linux from another linux"
+permalink: alpine-linux-install
 date: 2024-06-08
 categories: linux
 author:
