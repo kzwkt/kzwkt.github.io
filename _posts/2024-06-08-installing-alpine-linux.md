@@ -30,7 +30,7 @@ sudo ./apk.static  -X "http://dl-cdn.alpinelinux.org/alpine/latest-stable/main" 
 ```
 
 ```
-cat chroot.sh
+nano chroot.sh
 ```
 ```
 mount --rbind /dev /mnt/dev && mount --make-rslave /mnt/dev
@@ -94,7 +94,7 @@ zathura-pdf-mupdf
 
 run setup-devd, choose mdev or udev dont install libudev-zero if you plan to use udev
 
-cat .bin/s
+nano ~/.bin/s
 ```
 if [ -z "$XDG_RUNTIME_DIR" ]; then
 	XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir"
