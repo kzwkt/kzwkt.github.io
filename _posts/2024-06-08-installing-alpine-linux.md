@@ -10,6 +10,7 @@ meta: "linux,alpine"
 
 download static apk from gitlab release for your architecture
 https://gitlab.alpinelinux.org/alpine/apk-tools/-/releases
+chmod +x apk.static
 
 sudo cfdik /dev/sda
 make new partition lets say its sda2
