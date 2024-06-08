@@ -49,7 +49,7 @@ sudo /bin/sh ./chroot.sh
 ```
 cat /etc/apk/workd
 ```
-
+apk add
 alpine-base
 alsa-utils
 brightnessctl
