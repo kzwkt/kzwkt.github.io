@@ -45,7 +45,7 @@ chroot  /mnt /bin/sh
 sudo /bin/sh ./chroot.sh
 ```
 
-
+#install some apps
 ```
 cat /etc/apk/workd
 ```
@@ -92,6 +92,7 @@ wl-clipboard
 wofi
 wtype
 zathura-pdf-mupdf
+
 
 cat .bin/s
 ```
