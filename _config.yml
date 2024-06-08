@@ -20,3 +20,5 @@ minima:
  skin: auto
 
 markdown: GFM
+
+defaults: - scope: path: "" type: "posts" values: comments: true
