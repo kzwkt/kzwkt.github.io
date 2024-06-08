@@ -11,8 +11,9 @@ meta: "linux,alpine"
 ```
 apk add bubblewrap
 ```
-
-cat ./bin/firefox
+```
+nano ~/.bin/firefox
+```
 ```
 #!/bin/sh
 DBUS_SOCKET_DIR=$(echo "$DBUS_SESSION_BUS_ADDRESS" | sed 's/unix:path=//; s/,.*//')
