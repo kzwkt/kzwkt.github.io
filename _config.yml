@@ -5,9 +5,8 @@ author:
 description: >
   BLog post for things i want to find later, like a public clipboard 
   
-#theme: minima
-#remote_theme: jekyll/minima
-remote_theme: "mmistakes/jekyll-theme-basically-basic"
+#theme: minima for old version
+remote_theme: jekyll/minima
 
 plugins:
   - jekyll-feed
