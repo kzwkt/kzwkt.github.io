@@ -73,6 +73,7 @@ wtype
 zathura-pdf-mupdf
 
 cat ./bin/firefox
+---
 #!/bin/sh
 DBUS_SOCKET_DIR=$(echo "$DBUS_SESSION_BUS_ADDRESS" | sed 's/unix:path=//; s/,.*//')
 /usr/bin/bwrap \
@@ -117,6 +118,7 @@ DBUS_SOCKET_DIR=$(echo "$DBUS_SESSION_BUS_ADDRESS" | sed 's/unix:path=//; s/,.*/
  --ro-bind /usr/share/icu/ /usr/share/icu/ \
   --ro-bind /usr/share/mime/ /usr/share/mime/ \
   /usr/lib/firefox/firefox
+  ---
 
 cat .bin/s
 if [ -z "$XDG_RUNTIME_DIR" ]; then
