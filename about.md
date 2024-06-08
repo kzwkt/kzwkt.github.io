@@ -4,4 +4,6 @@ title: About
 permalink: /about/
 ---
 
-My name is kailash katheth, this is personal website 
+
+ this is personal website,  here i keep things i might need to lookup later 
+
