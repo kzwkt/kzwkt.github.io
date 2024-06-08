@@ -1,9 +1,6 @@
-site: kzwkt.github.io
-
-  disqus:
-    shortname: kzwkt-github-io
+disqus:
+ shortname: kzwkt-github-io
     
-
 title: Home
 author:
   name: kailash
@@ -26,4 +23,6 @@ minima:
  skin: auto
 
 markdown: GFM
+site: kzwkt.github.io
+
 
