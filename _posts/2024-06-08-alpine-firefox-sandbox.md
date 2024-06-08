@@ -58,3 +58,9 @@ DBUS_SOCKET_DIR=$(echo "$DBUS_SESSION_BUS_ADDRESS" | sed 's/unix:path=//; s/,.*/
   --ro-bind /usr/share/mime/ /usr/share/mime/ \
   /usr/lib/firefox/firefox
 ```
+
+more 
+https://wiki.alpinelinux.org/wiki/Bubblewrap
+https://wiki.alpinelinux.org/wiki/Bubblewrap/Examples
+https://wiki.archlinux.org/title/Bubblewrap
+https://wiki.archlinux.org/title/Bubblewrap/Examples
