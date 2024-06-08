@@ -59,7 +59,7 @@ DBUS_SOCKET_DIR=$(echo "$DBUS_SESSION_BUS_ADDRESS" | sed 's/unix:path=//; s/,.*/
   /usr/lib/firefox/firefox
 ```
 
-#Reference
+#Reference  
 https://wiki.alpinelinux.org/wiki/Bubblewrap  
 https://wiki.alpinelinux.org/wiki/Bubblewrap/Examples  
 https://wiki.archlinux.org/title/Bubblewrap  
