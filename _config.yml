@@ -6,11 +6,13 @@ description: >
   BLog post for things i want to find later, like a public clipboard 
   
 #theme: minima
-remote_theme: jekyll/minima
+#remote_theme: jekyll/minima
+remote_theme: "mmistakes/jekyll-theme-basically-basic"
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-remote-theme
 
 header_pages:
   - about.md
