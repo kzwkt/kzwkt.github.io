@@ -19,11 +19,11 @@ mount /dev/sda2 /mnt
 sudo ./apk.static  -X "http://dl-cdn.alpinelinux.org/alpine/latest-stable/main" -U --allow-untrusted --root /mnt --initdb add alpine-base'
 
 cat chroot.sh  
-'mount --rbind /dev /mnt/dev && mount --make-rslave /mnt/dev
+mount --rbind /dev /mnt/dev && mount --make-rslave /mnt/dev
 mount --rbind /dev/pts /mnt/dev/pts && mount --make-rslave /mnt/dev/pts
 mount --rbind /proc /mnt/proc && mount --make-rslave /mnt/proc
 mount --rbind /sys /mnt/sys && mount --make-rslave /mnt/sys
-chroot  /mnt /bin/sh'
+chroot  /mnt /bin/sh
 
 sudo /bin/sh ./chroot.sh
 
@@ -72,7 +72,7 @@ wtype
 zathura-pdf-mupdf
 
 cat ./bin/firefox
-'#!/bin/sh
+#!/bin/sh
 DBUS_SOCKET_DIR=$(echo "$DBUS_SESSION_BUS_ADDRESS" | sed 's/unix:path=//; s/,.*//')
 /usr/bin/bwrap \
   --unshare-all --share-net --new-session --die-with-parent --cap-drop ALL  \
@@ -115,10 +115,10 @@ DBUS_SOCKET_DIR=$(echo "$DBUS_SESSION_BUS_ADDRESS" | sed 's/unix:path=//; s/,.*/
   --ro-bind /usr/share/themes /usr/share/themes \
  --ro-bind /usr/share/icu/ /usr/share/icu/ \
   --ro-bind /usr/share/mime/ /usr/share/mime/ \
-  /usr/lib/firefox/firefox'
+  /usr/lib/firefox/firefox
 
 cat .bin/s
-'if [ -z "$XDG_RUNTIME_DIR" ]; then
+if [ -z "$XDG_RUNTIME_DIR" ]; then
 	XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir"
 	mkdir -pm 0700 "$XDG_RUNTIME_DIR"
 	export XDG_RUNTIME_DIR
@@ -126,4 +126,4 @@ fi
 
 export NO_AT_BRIDGE=1
 dbus-run-session sway
-'
+
