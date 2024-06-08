@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Installing alpine linux from another linux"
+categories: linux
+author:
+- Kailash
+meta: "linux,alpine"
+---
+
 download static apk from gitlab release for your architecture
 https://gitlab.alpinelinux.org/alpine/apk-tools/-/releases
 
