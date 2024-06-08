@@ -17,3 +17,5 @@ header_pages:
 
 minima:
  skin: auto
+
+markdown: GFM
