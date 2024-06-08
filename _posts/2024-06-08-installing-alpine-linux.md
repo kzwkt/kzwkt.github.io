@@ -45,7 +45,7 @@ chroot  /mnt /bin/sh
 sudo /bin/sh ./chroot.sh
 ```
 
-#install some apps
+# install some apps
 ```
 cat /etc/apk/workd
 ```
