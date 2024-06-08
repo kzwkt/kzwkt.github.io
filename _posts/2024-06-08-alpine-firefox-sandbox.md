@@ -9,7 +9,7 @@ author:
 meta: "linux,alpine"
 ---
 ```
-apk add bubblewrap
+doas apk add bubblewrap
 ```
 ```
 nano ~/.bin/firefox
