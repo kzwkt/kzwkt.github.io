@@ -5,11 +5,16 @@
 
 _Create a site or blog from your GitHub repositories with GitHub Pages._
 using https://github.com/jekyll/minima/
+
 https://jekyllrb.com/docs/front-matter/
+
 available layouts are : base,home,page,post
+
 frontmatter items : layout,permalink,published,date,category,categories,tags
 https://jekyllrb.com/docs/configuration/front-matter-defaults/
+
 add defaults to  _config.yml
+
 ---yaml
 defaults:
   -
