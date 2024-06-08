@@ -73,7 +73,7 @@ wtype
 zathura-pdf-mupdf
 
 cat ./bin/firefox
----
+---sh
 #!/bin/sh
 DBUS_SOCKET_DIR=$(echo "$DBUS_SESSION_BUS_ADDRESS" | sed 's/unix:path=//; s/,.*//')
 /usr/bin/bwrap \
