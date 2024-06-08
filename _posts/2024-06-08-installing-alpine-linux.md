@@ -18,11 +18,16 @@ chmod +x apk.static
 ```
 sudo cfdik /dev/sda
 ```
-make new partition lets say its sda2
-
-mkfs.ext4 /dev/sda2 
+make new partition lets say its sda2  
+```
+mkfs.ext4 /dev/sda2
+```
+```
 mount /dev/sda2 /mnt
+```
+```
 sudo ./apk.static  -X "http://dl-cdn.alpinelinux.org/alpine/latest-stable/main" -U --allow-untrusted --root /mnt --initdb add alpine-base
+```
 
 ```
 cat chroot.sh
