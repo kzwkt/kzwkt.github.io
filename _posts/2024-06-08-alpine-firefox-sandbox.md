@@ -8,8 +8,9 @@ author:
 - Kailash
 meta: "linux,alpine"
 ---
-
+```
 apk add bubblewrap
+```
 
 cat ./bin/firefox
 ```
