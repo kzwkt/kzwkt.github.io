@@ -3,3 +3,8 @@
 #- jekyll-remote-theme 
 theme: minima
    skin: dark
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+   
