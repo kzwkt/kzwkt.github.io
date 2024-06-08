@@ -92,8 +92,7 @@ wofi
 wtype
 zathura-pdf-mupdf
 
-run setup-devd, choose mdev or udev dont install libudev-zero if you plan to use udev, which allows udev rules for autoconfig 
- 
+run setup-devd, choose mdev or udev dont install libudev-zero if you plan to use udev
 
 cat .bin/s
 ```
