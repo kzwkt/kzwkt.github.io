@@ -1,3 +1,14 @@
+---
+layout: post
+title: "atomic model history"
+permalink: hist-atomic-model
+date: 2024-06-14
+categories: [physics,science,atomic-model]
+author:
+- Kailash
+meta: "science,history"
+---
+
 Leucippus of Miletus (5th century bce) originated atomic philosophy
 
 his disciple  Democritus of Abdera named building blocks of matter atomos, meaning literally “indivisible,” about 430 bce
