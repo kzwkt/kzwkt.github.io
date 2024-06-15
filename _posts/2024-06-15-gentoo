@@ -101,4 +101,37 @@ en_US.UTF-8 UTF-8
 
 locale-gen
 
+emerge -a gentoolkit eix iwd
+
+emerge eselect-repository dev-vcs/git
+rm -r /var/db/repos/gentoo
+eselect repository enable gentoo
+
+emerge --sync
+
+cat /etc/portage/package.use/all 
+app-admin/doas persist
+
+dev-libs/light udev
+sys-apps/util-linux   udev
+sys-devel/gcc -zstd
+sys-apps/openrc -netifrc
+net-wireless/iwd standalone -monitor
+
+
+media-libs/mesa vaapi 
+x11-libs/libdrm udev
+sys-auth/seatd server builtin
+gui-wm/sway -swaynag
+x11-misc/i3blocks -contrib
+media-video/mpv -xv alsa vaapi drm
+media-video/ffmpeg  vaapi alsa  mp3 libdrm x264  x265
+
+emerge media-libs/mesa
+emerge --ask --verbose --getbinpkg --binpkg-respect-use=n  media-libs/libva-intel-media-driver
+
+
+
+
+
 
