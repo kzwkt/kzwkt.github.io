@@ -128,7 +128,7 @@ media-video/mpv -xv alsa vaapi drm
 media-video/ffmpeg  vaapi alsa  mp3 libdrm x264  x265
 
 emerge media-libs/mesa
-emerge --ask --verbose -G media-libs/libva-intel-media-driver
+emerge --ask --verbose -G media-libs/libva-intel-media-driver  #not availabe for now 
 
 
 
