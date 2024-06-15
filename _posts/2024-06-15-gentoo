@@ -1,0 +1,91 @@
+---
+layout: post
+title: "gentoo install"
+permalink: gentoo-install
+date: 2024-06-15
+categories: [linux,gentoo]
+author:
+- Kailash
+meta: "linux,gentoo"
+---
+
+https://www.gentoo.org/downloads/  
+https://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-hardened-nomultilib-openrc/  
+https://wiki.gentoo.org/wiki/Handbook:AMD64/Full/Installation  
+https://www.gentoo.org/downloads/mirrors/  
+
+sudo mkfs.fat -F 32 /dev/sda1
+sudo mkfs.ext4 /dev/sda6
+sudo mke2fs -t ext4 -O ^has_journal /dev/sda5
+sudo mount /dev/sda6 /mnt
+sudo mount /dev/sda1 /mnt/efi       #if efi partition isnt mounted
+
+cd ~/Downloads
+sudo tar xpvf stage3-*.tar.xz --xattrs-include='*.*' --numeric-owner -C /mnt     #use tab after stage3 if many stage3 
+
+ df -h /dev/sda6 
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda6        40G  1.4G   36G   4% /mnt
+
+sudo cp --dereference /etc/resolv.conf /mnt/etc/
+
+ chroot.sh 
+#!/bin/sh
+mount --rbind /dev /mnt/dev && mount --make-rslave /mnt/dev
+mount --rbind /dev/pts /mnt/dev/pts && mount --make-rslave /mnt/dev/pts
+mount --rbind /proc /mnt/proc && mount --make-rslave /mnt/proc
+mount --rbind /sys /mnt/sys && mount --make-rslave /mnt/sys
+chroot  /mnt /bin/bash
+
+sudo bash chroot.sh
+source /etc/profile 
+export PS1="(chroot) ${PS1}"
+
+ nano /etc/portage/make.conf
+ COMMON_FLAGS="-O2 -pipe -march=native"
+ #ram/2 or nproc, if unset defaults to nproc
+MAKEOPTS="-j4 -l5"
+
+USE="-dbus -polkit -introspection -pulseaudio -llvm -X"
+
+ACCEPT_LICENSE="*"
+VIDEO_CARDS="intel "
+INPUT_DEVICES="libinput"
+
+emerge-webrsync
+...
+
+ * IMPORTANT: 20 news items need reading for repository 'gentoo'.
+ * Use eselect news read to view new items.
+
+ binhost
+ /etc/portage/binrepos.conf/gentoobinhost.conf
+ [binhost]
+priority = 9999
+sync-uri = https://distfiles.gentoo.org/releases/<arch>/binpackages/<profile>/x86-64/
+
+emerge --getbinpkg pkgname
+getuto   #get keyring
+
+emerge --ask --oneshot app-portage/cpuid2cpuflags
+echo "*/* $(cpuid2cpuflags)" > /etc/portage/package.use/00cpu-flags
+
+eselect profile list 
+eselect profile set xx  #if update profile required
+emerge --ask --verbose --update --deep --newuse @world
+emerge --ask --pretend --depclean
+
+for portage
+config:
+ *  - IPC_NS
+ *  - PID_NS
+ *  - NET_NS
+ *  - UTS_NS
+
+ echo "Asia/Kathmandu" > /etc/timezone
+ emerge --config sys-libs/timezone-data
+
+
+
+
+
