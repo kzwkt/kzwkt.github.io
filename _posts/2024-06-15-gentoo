@@ -55,7 +55,8 @@ priority = 9999
 sync-uri = https://distfiles.gentoo.org/releases/<arch>/binpackages/<profile>/x86-64/
 
 emerge --getbinpkg pkgname
-getuto   #get keyring
+getuto   #get keyring else FEATURES="binpkg-request-signature" in make.conf
+emerge --ask --verbose --getbinpkg --binpkg-respect-use=n  gcc
 
 emerge --ask --oneshot app-portage/cpuid2cpuflags
 echo "*/* $(cpuid2cpuflags)" > /etc/portage/package.use/00cpu-flags
@@ -74,7 +75,8 @@ config:
 
  echo "Asia/Kathmandu" > /etc/timezone
  emerge --config sys-libs/timezone-data
-
+or 
+ln -s /usr/share/zoneinfo/Asia/Kathmandu /etc/localtime
 
 # portage tmpdir
 nano /etc/fstab
@@ -94,6 +96,9 @@ chmod 775 /var/tmp/notmpfs
 /etc/portage/package.env
 sys-devel/gcc			notmpfs.conf
 
+nano /etc/locale.gen
+en_US.UTF-8 UTF-8
 
+locale-gen
 
 
