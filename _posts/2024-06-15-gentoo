@@ -86,6 +86,24 @@ config:
  emerge --config sys-libs/timezone-data
 
 
+portage tmpdir
+nano /etc/fstab
+tmpfs		/var/tmp/portage		tmpfs	size=2G,uid=portage,gid=portage,mode=775	0 0
+
+mount /var/tmp/portage
+
+/etc/portage/env/notmpfs.conf
+PORTAGE_TMPDIR="/var/tmp/notmpfs"
+
+```
+mkdir /var/tmp/notmpfs
+chown portage:portage /var/tmp/notmpfs
+chmod 775 /var/tmp/notmpfs 
+```
+
+/etc/portage/package.env
+sys-devel/gcc			notmpfs.conf
+
 
 
 
