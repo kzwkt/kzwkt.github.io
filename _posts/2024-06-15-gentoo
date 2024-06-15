@@ -56,7 +56,7 @@ sync-uri = https://distfiles.gentoo.org/releases/<arch>/binpackages/<profile>/x8
 
 emerge --getbinpkg pkgname
 getuto   #get keyring else FEATURES="binpkg-request-signature" in make.conf
-emerge --ask --verbose --getbinpkg --binpkg-respect-use=n  gcc
+emerge --ask --verbose -G  gcc
 
 emerge --ask --oneshot app-portage/cpuid2cpuflags
 echo "*/* $(cpuid2cpuflags)" > /etc/portage/package.use/00cpu-flags
@@ -128,7 +128,7 @@ media-video/mpv -xv alsa vaapi drm
 media-video/ffmpeg  vaapi alsa  mp3 libdrm x264  x265
 
 emerge media-libs/mesa
-emerge --ask --verbose --getbinpkg --binpkg-respect-use=n  media-libs/libva-intel-media-driver
+emerge --ask --verbose -G media-libs/libva-intel-media-driver
 
 
 
