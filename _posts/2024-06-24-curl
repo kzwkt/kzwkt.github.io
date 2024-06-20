@@ -1,0 +1,65 @@
+curl http://example.com   
+curl -L http://example.com    #follow redirects like google.com > www.google.com   
+curl -o output_file.html http://example.com   
+curl -O http://example.com/file.txt    #auto name , without name will error    
+curl -i http://example.com  #include headers   
+```
+example header      
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Age: 560592
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 20 Jun 2024 06:26:01 GMT
+Etag: "3147526947"
+Expires: Thu, 27 Jun 2024 06:26:01 GMT
+Last-Modified: Thu, 17 Oct 2019 07:18:26 GMT
+Server: ECAcc (lac/55A0)
+Vary: Accept-Encoding
+X-Cache: HIT
+Content-Length: 1256
+```
+
+curl http://example.com?param1=value1&param2=value2   #send get request with query parameter 
+
+curl -X POST -d "param1=value1&param2=value2" http://example.com  #send post request
+
+curl -X POST -H "Content-Type: application/json" -d '{"key1":"value1", "key2":"value2"}' http://example.com    #json post
+
+curl -H "Authorization: Bearer token" http://example.com  # send request with custom header
+
+curl -C - -O http://example.com/file.zip  #resume broken downoad
+
+curl --limit-rate 100K -O http://example.com/largefile.zip
+
+curl -T file.txt ftp://example.com/remote/path/  #upload
+
+curl -F "name=user" -F "file=@file.txt" http://example.com/upload #form data
+
+curl -A "Mozilla/5.0" http://example.com  #user agent set
+
+curl -s http://example.com #silent mode
+
+curl -b "name=value" http://example.com  #include cookie in qequest
+
+curl -c cookies.txt http://example.com #store cookies from response
+
+curl -b cookies.txt http://example.com #use stored cookies.txt
+
+curl --max-time 10 http://example.com
+
+curl -O http://example.com/file1.txt -O http://example.com/file2.txt
+
+curl -u username:password http://example.com
+
+curl -X PUT -d "param1=value1" http://example.com/resource #put request
+
+curl -X DELETE http://example.com/resource #delete request
+
+curl -x http://proxy.example.com:8080 http://example.com #use proxy
+curl -x http://proxy.example.com:8080 -O http://example.com/file.zip
+
+curl -I http://example.com #get response header
+
+curl -w "@curl-format.txt" -o /dev/null -s http://example.com #get timing info
+
