@@ -1,0 +1,47 @@
+---
+permalink : test
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Logo Example</title>
+  <style>
+    /* Optional: Add CSS styles to control SVG dimensions or other properties */
+    svg {
+      width: 100px;
+      height: 100px;
+      transition: fill 0.3s ease; /* Optional: Add smooth transition effect */
+    }
+  </style>
+</head>
+<body>
+  <div id="logo-container">
+    <!-- SVG logo embedded directly -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" id="logo">
+      <circle cx="50" cy="50" r="40" fill="#333" />
+    </svg>
+  </div>
+
+  <script>
+    // JavaScript to handle color change on mouseover
+    document.addEventListener('DOMContentLoaded', function() {
+      var logoSVG = document.getElementById('logo');
+
+      // Add event listener for mouseover
+      logoSVG.addEventListener('mouseover', function() {
+        // Change fill color on mouseover
+        logoSVG.querySelector('circle').setAttribute('fill', '#FF5733'); // Example color change
+      });
+
+      // Add event listener for mouseout (optional)
+      logoSVG.addEventListener('mouseout', function() {
+        // Restore original fill color on mouseout
+        logoSVG.querySelector('circle').setAttribute('fill', '#333'); // Original color
+      });
+    });
+  </script>
+</body>
+</html>
