@@ -1,0 +1,45 @@
+apt install dpkg-dev devscripts
+apt build-dep <package-name>
+debuild -b -uc -us
+-b: Build binary packages only
+-uc: Prevent signing of chainlog
+-us: Prevent signing of Source Code
+
+  dpkg-buildpackage -b -uc -us
+
+apt-get source --compile <package-name>
+
+   apt install zathura-dev libjbig2dec0-dev  libmupdf-dev libopenjp2-7-dev libssl-dev 
+
+
+  https://debian-handbook.info/browse/stable/debian-packaging.html
+
+
+
+  https://git.pwmt.org/pwmt/zathura/-/issues/174
+
+ [libmupdf-dev] unable to link against libmupdf.a
+  https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=617253
+  
+  
+   RFP: zathura-mupdf -- mupdf backend for zathura
+  https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=833068
+  
+   [mupdf] Please support to compile fitz as a .so
+  https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=719351
+     mupdf upstreams says "fitz is still immature and should not be
+exposed nor dynamically linked" (#719351)
+
+ RFP: zathura-mupdf -- mupdf backend for zathura
+  https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=731447
+This is blocked by a proper fix for #617253. Ideally, mupdf would start
+to provide a shared library (#719351) and commit to a somewhat stable
+API. mupdf needs to get in a better shape before zathura-pdf-mupdf can
+be packaged
+https://gitlab.com/paretje/zathura-pdf-mupdf
+
+  https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1073285
+  
+
+  
+  
