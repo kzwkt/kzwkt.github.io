@@ -1,0 +1,140 @@
+https://beautiful-soup-4.readthedocs.io/en/latest/
+
+pip install bs4 or beautifulsoup4
+
+# parsers
+Python’s html.parser
+syn: BeautifulSoup(markup, "html.parser")
+adv: Batteries included, Decent speed, Lenient 
+dis: Not as fast as lxml, less lenient than html5lib
+
+lxml’s HTML/Xml parser  :   https://lxml.de/    pip install lxml
+syn:  BeautifulSoup(markup, "lxml") , BeautifulSoup(markup, "lxml-xml") , BeautifulSoup(markup, "xml") [ only supported xml parser available ]
+adv:  Very fast, Lenient
+dis: External C dependency
+
+html5lib : https://github.com/html5lib/    pip install html5lib
+syn: BeautifulSoup(markup, "html5lib")
+adv: Extremely lenient, Parses pages the same way a web browser does, Creates valid HTML5
+dis:  Very slow, External Python dependency
+
+'html.parser' is default parser used if unspecified for now , better to specify for reliable future proof code
+
+how to parse 
+BeautifulSoup = constructor method __init__() 
+
+from bs4 import BeautifulSoup
+
+1. passing fhandle 
+with open("index.html") as fp:
+    soup = BeautifulSoup(fp)
+
+>>> type(soup)
+<class 'bs4.BeautifulSoup'>
+
+2. passing as string
+>>> BeautifulSoup("<p>Hello, BeautifulSoup!")
+<html><body><p>Hello, BeautifulSoup!</p></body></html>
+
+
+
+
+soup = BeautifulSoup("<html>data</html>")
+
+docs and entities are converted to unicode, valid parse tree is created ( closing and adding tags, normalization ), 
+>>> BeautifulSoup("Sacr&eacute; bleu!")
+<html><body><p>Sacré bleu!</p></body></html>
+
+
+Beautiful Soup transforms a complex HTML document into a complex tree of Python objects. 
+But you’ll only ever have to deal with about four kinds of objects: Tag, NavigableString, BeautifulSoup, and Comment
+
+Tag
+A Tag object corresponds to an XML or HTML tag in the original document:
+soup.tag , tag can be any html tag like b,p,html,head,title,body,div etc
+  example : soup.head, soup.b , soup.html etc
+Using a tag name as an attribute will give you only the first tag by that name
+for  all the <a> tags, or anything more complicated than the first tag with a certain name, 
+    you’ll need to Search the tree, such as find_all():
+ soup.find_all('a')   
+    
+
+every tag has .name attribute , which can be overridden 
+
+>>> soup = BeautifulSoup('<b class="boldest">Extremely bold</b>')
+>>>  tag = soup.b
+>>>  type(tag)
+<class 'bs4.element.Tag'>
+
+>>> tag
+<b class="boldest">Extremely bold</b>
+
+
+you can modify tag as dictionary to modify attributes
+>>> tag['id'] = 'verybold'
+>>> tag
+<meowbold class="boldest" id="verybold">Extremely bold</meowbold>
+
+tag.name='meowbold'
+>>> tag
+<meowbold class="boldest">Extremely bold</meowbold>
+
+html attributes of html tag are treated like dictionary 
+
+You can access that dictionary directly as .attrs:
+>>> tag.attrs
+{'class': ['boldest']}
+
+values of multi valued attributes class,rel, rev, accept-charset, headers, and accesskey is treated as list in dictionary otherwise its a string
+
+>>> tag['class']
+['boldest']
+
+>>> del tag['id']
+
+
+If you parse a document as XML, there are no multi-valued attributes
+
+
+NavigableString
+tag.string
+
+not editable but replaceable
+
+tag.string.replace_with("No longer bold")
+tag
+# <blockquote>No longer bold</blockquote>
+
+
+convert to unicode to preserve memory if use outside bs4
+unicode_string = unicode(tag.string)
+
+ BeautifulSoup
+ like tag but represent whole parsed html object
+  special .name “[document]”
+
+  comment
+  The Comment object is just a special type of NavigableString with comment :
+  markup = "<b><!--Hey, buddy. Want to buy a used parser?--></b>"
+  its displayed with # 
+
+  XML document classes : CData, ProcessingInstruction, Declaration, and Doctype.
+these classes are subclasses of NavigableString that add something extra to the string
+
+    from bs4 import CData
+
+
+navigation 
+    
+
+  A tag’s children are available in a list called .contents:
+    
+.parent
+iterable .parents
+.next_sibling and .previous_sibling
+.next_element and .previous_element
+    
+    
+searching
+    
+
