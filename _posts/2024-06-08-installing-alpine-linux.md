@@ -60,7 +60,7 @@ setup-apkrepos
 ```
 
 
-# install some apps
+install some apps
 ```
 cat /etc/apk/workd
 ```
