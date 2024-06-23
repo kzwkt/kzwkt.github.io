@@ -128,4 +128,8 @@ sudo apk add  build-base ncurses-dev  libssl-dev bc flex elfutils-dev bison diff
 
 ```
 
+https://kisscommunity.org/kernel/patches/kernel-no-perl.patch
+patch -p1 < /usr/share/doc/kiss/wiki/kernel/no-perl.patch  
+https://www.kisslinux.org/install
+https://kisscommunity.org/kernel/config/
 
