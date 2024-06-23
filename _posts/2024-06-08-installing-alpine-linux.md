@@ -54,6 +54,12 @@ set nameserver for internet
 echo "nameserver 1.1.1.1"  > /etc/resolv.conf
 ```
 
+do some alpine setup like setup-alpine etc 
+```
+setup-apkrepos
+```
+
+
 # install some apps
 ```
 cat /etc/apk/workd
