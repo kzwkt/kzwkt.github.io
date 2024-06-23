@@ -49,6 +49,10 @@ chroot  /mnt /bin/sh
 ```
 sudo /bin/sh ./chroot.sh
 ```
+set nameserver for internet
+```
+echo "nameserver 1.1.1.1"  > /etc/resolv.conf
+```
 
 # install some apps
 ```
