@@ -124,7 +124,7 @@ dbus-run-session sway
 custom kernel try
 ```
 apk add xz-utils zstd  # whatever kernel compression elfutils-dev install these both
-sudo apk add  build-base ncurses-dev  libssl-dev bc flex elfutils-dev bison diffutils
+sudo apk add  build-base ncurses-dev  libssl-dev bc flex elfutils-dev bison diffutils openssl-dev
 
 ```
 
