@@ -9,6 +9,11 @@ author:
 meta: "linux,alpine"
 ---
 
+make partitin without journal and reserved space
+```
+sudo mke2fs -t ext4 -O ^has_journal -m 0  /dev/sda5
+```
+
 download static apk from gitlab release for your architecture
 https://gitlab.alpinelinux.org/alpine/apk-tools/-/releases
 
