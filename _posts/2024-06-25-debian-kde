@@ -1,0 +1,25 @@
+apt install  xserver-xorg-input-libinput xserver-xorg-video-dummy sddm kwin-wayland  vlc plasma-nm powerdevil plasma-workspace-wayland  
+apt install systemsettings breeze-gtk-theme kde-config-gtk-style kde-config-sddm kde-config-screenlocker plasma-pa xdg-desktop-portal-kde  polkit-kde-agent-1 
+apt install dolphin 
+
+
+apt install kde-plasma-desktop konsole kmenuedit kdialog upower 
+
+
+
+
+suggested
+phonon4qt5-backend-gstreamer
+udisks2-zram
+libpam-kwallet5 powerdevil
+exfatprogs
+qml-module-org-kde-pipewire
+
+
+
+/etc/NetworkManager/conf.d/iwd.conf 
+[device]
+wifi.backend=iwd
+
+systemctl restart NetworkManager
+systemctl enable  sddm
