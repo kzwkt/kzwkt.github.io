@@ -111,8 +111,8 @@ ROOT-A is copied to partition 3,5 and KERN-B to 2,4 ; KERN-B and KERN-A looks id
 
 for postinstall fix we need to mount /dev/nvme0n1p12 and modify efi/boot/grub.cfg to match root=UUID=xxx of the cros partition wtih label root-A    
 
-i did manually there is postinstall script we could adapt https://github.com/imperador/chromefy/blob/master/croissant.sh
-sudo bash fixuuid.sh
+i did manually there is postinstall script here https://github.com/imperador/chromefy/blob/master/croissant.sh  
+sudo bash fixuuid.sh  
 ```
 # use your install disk name
 DST=/dev/nvme0n1
