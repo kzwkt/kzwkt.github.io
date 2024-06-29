@@ -35,6 +35,7 @@ Archive:  latest.bin.zip
   inflating: chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin  
 
 cgpt show chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin 
+<details>
   ```
        start        size    part  contents
            0           1          PMBR (Boot GUID: DAD88F00-217F-6441-8C48-095ECA622ACE)
@@ -101,7 +102,7 @@ LABEL,	size_MB
 "RWFW"	 0.0005
 "EFI-SYSTEM" 62.5  MB
 ```
-
+</details>
 
 sudo chromeos-install.sh chrome.img /dev/nvme0n1    
 
