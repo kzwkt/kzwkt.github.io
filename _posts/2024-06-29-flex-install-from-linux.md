@@ -34,8 +34,11 @@ unzip latest.bin.zip or  7z x latest.bin.zip
 Archive:  latest.bin.zip  
   inflating: chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin  
 
-cgpt show chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin 
 <details>
+
+cgpt show chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin  
+  
+ 
   ```
        start        size    part  contents
            0           1          PMBR (Boot GUID: DAD88F00-217F-6441-8C48-095ECA622ACE)
