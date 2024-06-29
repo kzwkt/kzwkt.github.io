@@ -34,7 +34,7 @@ unzip latest.bin.zip or  7z x latest.bin.zip
 Archive:  latest.bin.zip  
   inflating: chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin  
 
-<details>
+partition <details>
 
 cgpt show chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin  
   
