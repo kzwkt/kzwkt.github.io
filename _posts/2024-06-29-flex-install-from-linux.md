@@ -84,6 +84,8 @@ cgpt show chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin
     13815992           1          Sec GPT header
 
 ```
+
+size 
 ```
 LABEL,	size_MB
 "STATE"	 4005.5 = 4GB
