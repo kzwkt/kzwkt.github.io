@@ -1,12 +1,12 @@
 # install chrome os flex from linux without USB
 
-sudo dnf install cgpt pv  
+sudo dnf install cgpt pv    
 
-find latest brunch release branch at this time its r125
-https://github.com/sebanc/brunch/tree/r125  
-grab https://github.com/sebanc/brunch/blob/r125/scripts/chromeos-install.sh 
+find latest brunch release branch at this time its r125  
+https://github.com/sebanc/brunch/tree/r125   
+grab https://github.com/sebanc/brunch/blob/r125/scripts/chromeos-install.sh   
 
-get rid of these lines from install_singleboot() 
+get rid of these lines from install_singleboot()   
 
 ```
  
@@ -23,16 +23,16 @@ get rid of these lines from install_singleboot()
 
 ```
 
-for dualboot maybe similarly from install_dualboot() 7) and 12) options , havent tested  
+for dualboot maybe similarly from install_dualboot() 7) and 12) options , haven't tested    
 
-download chrome os flex image  
-https://chromiumdash.appspot.com/serving-builds?deviceCategory=ChromeOS%20Flex  
-or direct  link  via web or wget
-wget https://dl.google.com/chromeos-flex/images/latest.bin.zip  
+download chrome os flex image    
+https://chromiumdash.appspot.com/serving-builds?deviceCategory=ChromeOS%20Flex    
+or direct  link  via web or wget  
+wget https://dl.google.com/chromeos-flex/images/latest.bin.zip    
 
 unzip latest.bin.zip or  7z x latest.bin.zip  
-Archive:  latest.bin.zip
-  inflating: chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin
+Archive:  latest.bin.zip  
+  inflating: chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin  
 
   ````
 cgpt show chromeos_15393.58.0_reven_recovery_stable-channel_mp-v2.bin 
