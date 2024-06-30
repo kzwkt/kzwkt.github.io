@@ -2,3 +2,10 @@ https://github.com/ipxe/wimboot/releases
 
 https://github.com/ipxe/wimboot/releases/download/v2.8.0/wimboot
 
+
+/efi/loader/entries/wim.conf
+title  wimboot
+efi wimboot
+initrd boot/bcd         BCD
+initrd boot/boot.sdi    boot.sdi
+initrd sources/boot.wim boot.wim
