@@ -1,0 +1,28 @@
+http://slackware.uk/slackwarearm/slackwarearm-devtools/minirootfs/roots/
+
+
+
+
+http://ftp.slackware.com/pub/slackware/slackware64-current/  
+http://slackware.uk/slackware/slackware64-current/   
+
+
+
+
+http://ftp.slackware.com/pub/slackware/slackware64-current/README.initrd
+
+ installpkg kernel-generic-6.9.7-x86_64-1.txz
+  installpkg kernel-modules-6.9.7-x86_64-1.txz
+  installpkg mkinitrd-1.4.11-x86_64-34.txz
+
+
+    cd /boot
+  mkinitrd -c -k 6.9.7 -m ext4
+
+  
+
+    http://ftp.slackware.com/pub/slackware/slackware64-current/EFI/BOOT/
+    http://ftp.slackware.com/pub/slackware/slackware64-current/EFI/BOOT/huge.s
+    http://ftp.slackware.com/pub/slackware/slackware64-current/EFI/BOOT/initrd.img
+    
+    
