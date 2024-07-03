@@ -25,4 +25,44 @@ http://ftp.slackware.com/pub/slackware/slackware64-current/README.initrd
     http://ftp.slackware.com/pub/slackware/slackware64-current/EFI/BOOT/huge.s
     http://ftp.slackware.com/pub/slackware/slackware64-current/EFI/BOOT/initrd.img
     
-    
+get pkgtools
+mkdir pkg 
+cd pkg
+http://slackware.uk/slackware/slackware64-current/slackware64/a/pkgtools-15.1-noarch-10.txz
+tar xf pkgtools-15.1-noarch-10.txz 
+sudo cp -r var/lib/pkgtools  var/lib/pkgtools
+download  base mimial
+aaa packages, pkgtools,bn,acl,bash,coreutils,cpio,devfs,dosfstools,e2fsprogs,etc,eudev,file,hostname,util-linux,sysvinit,sysvinit-functions,grep,sed,openssl-solibs, 
+ ap: slackpkg
+n gnupg2,wget,ca-certificates
+l: ncurses , icu4c , libedit
+sudo ./sbin/installpkg --root /mnt *.txz
+
+
+
+
+for complete package
+mkdir {a,ap,d,f,k,l,n,tcl,x,xap}
+
+cd a
+ wget -r -np -nd ftp://carroll.cac.psu.edu/pub/linux/distributions/slackware/slackware64-current/slackware64/a
+
+sudo installpkg --root /mnt {a,ap,d,f,k,l,n,tcl,x,xap}/*.t?z
+
+sudo cp -L /etc/resolv.conf /mnt/etc
+
+chroot.sh 
+mount --rbind /dev /mnt/dev && mount --make-rslave /mnt/dev
+mount --rbind /dev/pts /mnt/dev/pts && mount --make-rslave /mnt/dev/pts
+mount --rbind /proc /mnt/proc && mount --make-rslave /mnt/proc
+mount --rbind /sys /mnt/sys && mount --make-rslave /mnt/sys
+chroot  /mnt /bin/bash
+
+
+nano -w /etc/slackpkg/mirrors
+
+
+
+slackpkg update
+
+
