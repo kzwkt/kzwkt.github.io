@@ -1,11 +1,6 @@
 http://slackware.uk/slackwarearm/slackwarearm-devtools/minirootfs/roots/
-
-
-
-
 http://ftp.slackware.com/pub/slackware/slackware64-current/  
 http://slackware.uk/slackware/slackware64-current/   
-
 
 
 
@@ -15,22 +10,23 @@ http://ftp.slackware.com/pub/slackware/slackware64-current/README.initrd
   installpkg kernel-modules-6.9.7-x86_64-1.txz
   installpkg mkinitrd-1.4.11-x86_64-34.txz
 
-
     cd /boot
   mkinitrd -c -k 6.9.7 -m ext4
-
-  
 
     http://ftp.slackware.com/pub/slackware/slackware64-current/EFI/BOOT/
     http://ftp.slackware.com/pub/slackware/slackware64-current/EFI/BOOT/huge.s
     http://ftp.slackware.com/pub/slackware/slackware64-current/EFI/BOOT/initrd.img
-    
+
+
+# installing minimal base from another linux
 get pkgtools
 mkdir pkg 
 cd pkg
 http://slackware.uk/slackware/slackware64-current/slackware64/a/pkgtools-15.1-noarch-10.txz
 tar xf pkgtools-15.1-noarch-10.txz 
-sudo cp -r var/lib/pkgtools  var/lib/pkgtools
+sudo cp -r var/lib/pkgtools  /var/lib/pkgtools
+
+# dependencies for base package
 download  base mimial
 aaa packages, pkgtools,bn,acl,bash,coreutils,cpio,devfs,dosfstools,e2fsprogs,etc,eudev,file,hostname,util-linux,sysvinit,sysvinit-functions,grep,sed,openssl-solibs, findutils, dcron
 dialog gzip bzip2
@@ -38,13 +34,6 @@ dialog gzip bzip2
 n gnupg2,wget,ca-certificates,openssl,libgcrypt,libgpg-error,libassuan
 l: ncurses , icu4c , libedit
 d perl 
-
-
-
-deps 
-for gpg2  libgcrypt,libgpg-error,libassuan
-for pkgtools nupg2,wget,ca-certificates,openssl,
-for running update-ca-certificates  =  findutils, dcron, perl
 
 
 
@@ -75,7 +64,6 @@ chroot  /mnt /bin/bash
 nano -w /etc/slackpkg/mirrors
 uncomment one mirror 
 
-update-ca-certificates --fresh
 
 slackpkg update
 
@@ -88,6 +76,29 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/nvme0n1p4  9.8G  328M  9.0G   4% /
 
 Packages: 52 (pkgtool) 
+
+
+
+deps 
+for gpg2  libgcrypt,libgpg-error,libassuan
+for pkgtools nupg2,wget,ca-certificates,openssl,
+for running update-ca-certificates  =  findutils, dcron, perl
+
+update-ca-certificates --fresh
+
+shadow for adduser,useradd etc
+passwd need pam
+
+slackpkg  file-search  libpam.so.0
+[uninstalled] - pam-1.6.0-x86_64-1_slack15.0
+
+slackpkg install shadow pam
+
+install cracklib libpwquality or comment their line in /etc/pam.d/system-auth
+
+
+
+
 
 
 
