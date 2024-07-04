@@ -96,6 +96,10 @@ slackpkg install shadow pam
 
 install cracklib libpwquality or comment their line in /etc/pam.d/system-auth
 
+slackpkg   file-search libnl-3.so.200
+
+slackpkg install htop libnl3
+
 
 
 
