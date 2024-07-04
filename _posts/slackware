@@ -111,6 +111,19 @@ installing kernel
 [uninstalled] - kernel-modules-5.15.161-x86_64-1
 [uninstalled] - kernel-source-5.15.161-noarch-1
 
+sackpkg install kernel-huge
+
+mount esp to efi or from host 
+
+cp /boot/vmlinuz /efi/
+
+cat /efi/loader/entries/slackware.conf 
+title slack
+linux /slack 
+options root=PARTUUID=a5d2aff5-4250-3442-b155-a7f3fe126f6f rw quiet
+
+
+
 
 
 
