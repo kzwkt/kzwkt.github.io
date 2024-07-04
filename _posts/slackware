@@ -35,9 +35,19 @@ download  base mimial
 aaa packages, pkgtools,bn,acl,bash,coreutils,cpio,devfs,dosfstools,e2fsprogs,etc,eudev,file,hostname,util-linux,sysvinit,sysvinit-functions,grep,sed,openssl-solibs, findutils, dcron
 dialog gzip bzip2
  ap: slackpkg
-n gnupg2,wget,ca-certificates,openssl
+n gnupg2,wget,ca-certificates,openssl,libgcrypt,libgpg-error,libassuan
 l: ncurses , icu4c , libedit
 d perl 
+
+
+
+deps 
+for gpg2  libgcrypt,libgpg-error,libassuan
+for pkgtools nupg2,wget,ca-certificates,openssl,
+for running update-ca-certificates  =  findutils, dcron, perl
+
+
+
 
 sudo ./sbin/installpkg --root /mnt *.txz
 
@@ -63,10 +73,13 @@ chroot  /mnt /bin/bash
 
 
 nano -w /etc/slackpkg/mirrors
-
+uncomment one mirror 
 
 update-ca-certificates --fresh
 
 slackpkg update
+
+slackpkg install lzlib nano
+slackpkg install neofetch
 
 
