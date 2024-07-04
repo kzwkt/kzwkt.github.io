@@ -83,3 +83,11 @@ slackpkg install lzlib nano
 slackpkg install neofetch
 
 
+df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p4  9.8G  328M  9.0G   4% /
+
+Packages: 52 (pkgtool) 
+
+
+
