@@ -101,6 +101,18 @@ slackpkg   file-search libnl-3.so.200
 slackpkg install htop libnl3
 
 
+installing kernel 
+ slackpkg search kernel
+
+[uninstalled] - kernel-firmware-20240606_90df68d-noarch-1
+[uninstalled] - kernel-generic-5.15.161-x86_64-1
+[uninstalled] - kernel-headers-5.15.161-x86-1
+[uninstalled] - kernel-huge-5.15.161-x86_64-1
+[uninstalled] - kernel-modules-5.15.161-x86_64-1
+[uninstalled] - kernel-source-5.15.161-noarch-1
+
+
+
 
 
 
