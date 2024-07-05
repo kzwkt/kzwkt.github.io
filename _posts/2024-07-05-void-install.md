@@ -92,7 +92,9 @@ to /lib/firmware/
 ```
 
   
-
+disable logs
+sudo touch /etc/vlogger
+sudo chmod +x  /etc/vlogger
   
 
 
