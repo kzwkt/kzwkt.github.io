@@ -18,13 +18,19 @@ export XBPS_ARCH=x86_64          # without this void will try to install musl , 
  ./usr/bin/xbps-install -S -r /mnt -R "https://repo-default.voidlinux.org/current" base-minimal
 echo "nameserver 1.1.1.1"  > /etc/resolv.conf
 echo "x" > /etc/hostname
+```
 
 
 # rootfs method 
 https://voidlinux.org/download/#download-installable-base-live-images-and-rootfs-tarballs    
+```
+
 tar xvf void-<...>-ROOTFS.tar.xz -C /mnt   
+```
 
 # chroot
+```
+
 xbps-install bash-completion neofetch mdocml iwd nano  foot-terminfo wireless-regdb  htop sway foot wofi grim slurp jq   zathura zathura-pdf-mupdf  seatd dumb_runtime_dir pipewire nnn slurp mpv  e2fsprogs dosfstools ntfs-3g mesa-dri opendoas wl-clipboard wlsunset 
 xbps-install linux-lts
 notice linux version
