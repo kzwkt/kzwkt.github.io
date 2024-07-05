@@ -96,4 +96,3 @@ to /lib/firmware/
 
 
 
-https://voidlinux.org/download/#download-installable-base-live-images-and-rootfs-tarballs
