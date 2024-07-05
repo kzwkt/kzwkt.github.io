@@ -13,8 +13,10 @@ cp var/db/xbps/keys/* /mnt/var/db/xbps/keys/
 
 # https://xmirror.voidlinux.org/
 
-export XBPS_ARCH=x86_64          # without this void will try to install musl , repo is /current/musl for musl 
-  
+export XBPS_ARCH=x86_64          # without this void will try to install musl , repo is /current/musl for musl
+
+without ca-certiticates letsencrypt cert error
+export SSL_NO_VERIFY_PEER=true   
  ./usr/bin/xbps-install -S -r /mnt -R "https://repo-default.voidlinux.org/current" base-minimal
 echo "nameserver 1.1.1.1"  > /etc/resolv.conf
 echo "x" > /etc/hostname
