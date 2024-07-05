@@ -93,13 +93,24 @@ to /lib/firmware/
 
   
 disable logs  
+```
 sudo touch /etc/vlogger  
 sudo chmod +x  /etc/vlogger  
   
 
  cat  /etc/runit/core-services/08-sysctl.sh 
          sysctl -p "$i"  >> /dev/null
+```
+silent booot 
+```
+loglevel=0 console=tty2 udev.log_level=0 vt.global_cursor_default==0
+intel_iommu=igfx_off  nowatchdog 
 
+sudo xbps-install gummiboot
+sudo gummiboot install
+sudo nano /boot/loader/void-options.conf
+sudo ln -s /usr/share/fontconfig/conf.avail/70-no-bitmaps.conf /etc/fonts/conf.d/
+sudo xbps-reconfigure -f fontconfig
 
-
+```
 
