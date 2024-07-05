@@ -97,6 +97,9 @@ sudo touch /etc/vlogger
 sudo chmod +x  /etc/vlogger  
   
 
+ cat  /etc/runit/core-services/08-sysctl.sh 
+         sysctl -p "$i"  >> /dev/null
+
 
 
 
