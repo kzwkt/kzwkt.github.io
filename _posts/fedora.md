@@ -1,11 +1,11 @@
-https://mirrormanager.fedoraproject.org/
+https://mirrormanager.fedoraproject.org/  
 
-https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/40/
+https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/40/  
 
-https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/40/Container/x86_64/images/Fedora-Container-Base-Generic-Minimal.x86_64-40-1.14.oci.tar.xz
+https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/40/Container/x86_64/images/Fedora-Container-Base-Generic-Minimal.x86_64-40-1.14.oci.tar.xz  
 
-tar xf Fedora-Container-Base-Generic-Minimal.x86_64-40-1.14.oci.tar.xz
-
+tar xf Fedora-Container-Base-Generic-Minimal.x86_64-40-1.14.oci.tar.xz  
+```
  tar tvf Fedora-Container-Base-Generic-Minimal.x86_64-40-1.14.oci.tar.xz 
 drwxr-xr-x 0/0               0 2024-04-14 22:54 blobs/
 drwxr-xr-x 0/0               0 2024-04-14 22:54 blobs/sha256/
@@ -14,15 +14,15 @@ drwxr-xr-x 0/0               0 2024-04-14 22:54 blobs/sha256/
 -rw-r--r-- 0/0        46685693 2024-04-14 22:54 blobs/sha256/9d0aac0d3c97889a0fe94300a83f41d7dc3383d41e24c124604c310bd4053534
 -rw-r--r-- 0/0             258 2024-04-14 22:54 index.json
 -rw-r--r-- 0/0              30 2024-04-14 22:54 oci-layout
+```
+sudo tar xvpf blobs/sha256/9d0aac0d3c97889a0fe94300a83f41d7dc3383d41e24c124604c310bd4053534 -C /mnt/  
 
-sudo tar xvpf blobs/sha256/9d0aac0d3c97889a0fe94300a83f41d7dc3383d41e24c124604c310bd4053534 -C /mnt/
+echo "nameserver 1.1.1.1"  > /mnt/etc/resolv.conf  
 
-echo "nameserver 1.1.1.1"  > /mnt/etc/resolv.conf
+sudo bash chroot.sh  
 
-sudo bash chroot.sh
-
-dnf5 update
-
+dnf5 update  
+```
 Transaction Summary:
  Installing:        2 packages
  Upgrading:        42 packages
@@ -30,21 +30,21 @@ Transaction Summary:
 
 Total size of inbound packages is 17 MiB. Need to download 17 MiB.
 After this operation 3 MiB will be used (install 52 MiB, remove 50 MiB).
-
+```
 dnf5 leaves
 - dnf5-0:5.1.17-1.fc40.x86_64
 - libreport-filesystem-0:2.17.15-1.fc40.noarch
-
+```
 dnf5 install nano
 Package                                                                            Arch              Version                                                                             Repository                                           Size
 Installing:                                                                                                                                                                                                                                       
  nano                                                                              x86_64            7.2-7.fc40                                                                          updates                                           2.9 MiB
 Installing dependencies:                                                                                                                                                                                                                          
  file-libs           
-
+```
 nano /etc/dnf/dnf.conf  
 install_weak_deps=False
-
+```
 dnf5 install bash-completion
 Updating and loading repositories:
 Repositories loaded.
@@ -56,11 +56,11 @@ Installing dependencies:
  pkgconf                                                                           x86_64            2.1.1-1.fc40                                                                        updates                                          82.8 KiB
  pkgconf-m4                                                                        noarch            2.1.1-1.fc40                                                                        updates                                          13.9 KiB
  pkgconf-pkg-config                                                                x86_64            2.1.1-1.fc40                                                                        updates                                         989.0   B
-
+```
  . /etc/profile.d/bash_completion.sh 
 <details>
 
-
+   
  dnf5      
 install                         (Install software)                                                            module                          (Manage modules)
 upgrade                         (Upgrade software)                                                            history                         (Manage transaction history)
