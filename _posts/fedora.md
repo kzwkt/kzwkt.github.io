@@ -60,7 +60,7 @@ Installing dependencies:
  . /etc/profile.d/bash_completion.sh 
 <details>
 
-   
+   ```
  dnf5      
 install                         (Install software)                                                            module                          (Manage modules)
 upgrade                         (Upgrade software)                                                            history                         (Manage transaction history)
@@ -81,7 +81,9 @@ check-upgrade                   (Check for available package upgrades)          
 check                           (Check for problems in the packagedb)                                         updateinfo                      (Alias for 'advisory')
 group                           (Manage comps groups)                                                         upgrade-minimal                 (Alias for 'upgrade --minimal')
 environment                     (Manage comps environments)                                                   
+```
 
+```
  dnf5 list --installed 
 Installed packages
 alternatives.x86_64                      1.27-1.fc40                updates
@@ -189,7 +191,9 @@ systemd-libs.x86_64                      255.8-1.fc40               updates
 xz-libs.x86_64                           1:5.4.6-3.fc40             <unknown>
 zchunk-libs.x86_64                       1.4.0-2.fc40               <unknown>
 zlib-ng-compat.x86_64                    2.1.7-1.fc40               updates
+```
 
+```
  dnf5 group list 
 Updating and loading repositories:
 Repositories loaded.
@@ -235,7 +239,9 @@ system-tools                System Tools                                       n
 text-internet               Text-based Internet                                no
 vlc                         VideoLAN Client                                    no
 window-managers             Window Managers                                    no
+```
 
+```
 dnf5 environment list
 Updating and loading repositories:
 Repositories loaded.
@@ -261,8 +267,10 @@ sway-desktop-environment          Sway Desktop                                no
 web-server-environment            Web Server                                  no
 workstation-product-environment   Fedora Workstation                          no
 xfce-desktop-environment          Xfce Desktop                                no
+```
 
+```
 dnf --config /builddir/result/image/build/image-root/kiwi_dnf4.conf -y --installroot /builddir/result/image/build/image-root --releasever=40 --setopt=install_weak_deps=False --exclude=*-firmware --exclude=dosfstools --exclude=e2fsprogs --exclude=fuse-libs --exclude=geolite2-city --exclude=geolite2-country --exclude=glibc-langpack-en --exclude=gnupg2-smime --exclude=grubby --exclude=kernel --exclude=langpacks-en --exclude=langpacks-en_GB --exclude=libss --exclude=pinentry --exclude=pinentry --exclude=shared-mime-info --exclude=sssd-client --exclude=trousers --exclude=tzdata --exclude=util-linux --exclude=xkeyboard-config install basesystem bash coreutils fedora-release-container filesystem glibc-minimal-langpack microdnf rpm 
-
+```
 </details>
 
