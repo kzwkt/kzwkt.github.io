@@ -1,0 +1,19 @@
+https://download.freebsd.org/releases/amd64/14.1-RELEASE/  
+
+https://download.freebsd.org/releases/amd64/14.1-RELEASE/base.txz
+198.3 MB
+https://download.freebsd.org/releases/amd64/14.1-RELEASE/kernel.txz
+53.1 MB
+for 32 bit libs
+https://download.freebsd.org/releases/amd64/14.1-RELEASE/lib32.txz
+60.5 MB
+
+for building from src:bsdports
+https://download.freebsd.org/releases/amd64/14.1-RELEASE/ports.txz
+49.1 MB
+
+
+
+
+
+
