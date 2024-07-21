@@ -13,6 +13,25 @@ https://download.freebsd.org/releases/amd64/14.1-RELEASE/ports.txz
 49.1 MB
 
 
+src: https://docs.freebsd.org/en/articles/remote-install/ 
+
+# mdconfig -a -t vnode -u 10 -f FreeBSD-10.1-RELEASE-amd64-disc1.iso
+# mount_cd9660 /dev/md10 /cdrom
+
+mkdir DIST
+tar -xvf /cdrom/usr/freebsd-dist/base.txz -C DIST
+tar -xvf /cdrom/usr/freebsd-dist/kernel.txz -C DIST
+
+
+
+gpart create -s gpt /dev/ada0
+gpart add -t freebsd-ufs -a 1M /dev/ada0
+newfs /dev/ada0p1
+
+gpart create -s gpt /dev/ada0
+gpart add -t freebsd-zfs -a 1M /dev/ada0
+zpool create zroot /dev/ada0p1
+
 
 
 
