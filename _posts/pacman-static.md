@@ -1,13 +1,14 @@
-https://pkgbuild.com/~morganamilo/pacman-static/x86_64/bin/
-https://pkgbuild.com/~morganamilo/pacman-static/x86_64/bin/
-https://pkgs.org/download/pacman-static
+https://pkgbuild.com/~morganamilo/pacman-static/x86_64/bin/  
+https://pkgbuild.com/~morganamilo/pacman-static/x86_64/bin/   
+https://pkgs.org/download/pacman-static  
 
-wget https://pkgbuild.com/~morganamilo/pacman-static/x86_64/bin/pacman-static
+wget https://pkgbuild.com/~morganamilo/pacman-static/x86_64/bin/pacman-static  
 
-mirrorlist choose one
-https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/pacman-mirrorlist/trunk/mirrorlist
+mirrorlist choose one  
+https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/pacman-mirrorlist/trunk/mirrorlist  
 
 cat pacman.conf
+```
 [options]
 HoldPkg = pacman glibc
 Architecture = auto
@@ -26,15 +27,18 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/extra/os/$arch
 [community]
 SigLevel = Required DatabaseOptional
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/community/os/$arch
+```
 
-
-sudo mkdir /mnt/var/lib/pacman/ -p 
-
+```
+sudo mkdir /mnt/var/lib/pacman/ -p
+```
+```
 sudo ./pacman-static -Syu --config ./pacman.conf  --root /mnt
+```
 
 
-for artix 
-
+cat artix.conf   
+```
 [options]
 HoldPkg = pacman 
 Architecture = auto
@@ -53,6 +57,7 @@ Server = https://mirrors.tuna.tsinghua.edu.cn/artixlinux/world/os/$arch
 [galaxy]
 SigLevel = Required DatabaseOptional
 Server = https://mirrors.tuna.tsinghua.edu.cn/artixlinux/galaxy/os/$arch
+```
 
 sudo ./pacman-static -Syu --config ./artix.conf  --root /mnt  base
 
