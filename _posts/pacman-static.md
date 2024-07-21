@@ -39,7 +39,7 @@ sudo ./pacman-static -Syu --config ./pacman.conf  --root /mnt
 cat artix.conf   
 ```
 [options]
-HoldPkg = pacman 
+HoldPkg = pacman glibc
 Architecture = auto
 CheckSpace
 CleanMethod = KeepInstalled
