@@ -35,6 +35,8 @@ sudo mkdir /mnt/var/lib/pacman/ -p
 sudo ./pacman-static -Syu --config ./pacman.conf  --root /mnt
 ```
 
+https://wiki.artixlinux.org/Main/Mirrors  
+https://gitea.artixlinux.org/packages/artix-mirrorlist/raw/branch/master/mirrorlist  
 
 cat artix.conf   
 ```
