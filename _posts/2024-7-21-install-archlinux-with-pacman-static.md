@@ -16,15 +16,15 @@ CleanMethod = KeepInstalled
 
 
 [core]
-SigLevel = Required DatabaseOptional
+SigLevel = Never DatabaseOptional
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/core/os/$arch
 
 [extra]
-SigLevel = Required DatabaseOptional
+SigLevel = Never DatabaseOptional
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/extra/os/$arch
 
 [community]
-SigLevel = Required DatabaseOptional
+SigLevel = Never DatabaseOptional
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/community/os/$arch
 ```
 
@@ -48,15 +48,15 @@ CleanMethod = KeepInstalled
 
 
 [system]
-SigLevel = Required DatabaseOptional
+SigLevel = Never DatabaseOptional
 Server = https://mirrors.tuna.tsinghua.edu.cn/artixlinux/system/os/$arch
 
 [world]
-SigLevel = Required DatabaseOptional
+SigLevel = Never DatabaseOptional
 Server = https://mirrors.tuna.tsinghua.edu.cn/artixlinux/world/os/$arch
 
 [galaxy]
-SigLevel = Required DatabaseOptional
+SigLevel = Never DatabaseOptional
 Server = https://mirrors.tuna.tsinghua.edu.cn/artixlinux/galaxy/os/$arch
 ```
 
