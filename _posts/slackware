@@ -38,6 +38,68 @@ d perl
 
 
 
+dl
+https://slackware.uk/slackware/slackware64/slackware64/a/aaa_base-15.0-x86_64-3.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/aaa_glibc-solibs-2.33-x86_64-5.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/aaa_libraries-15.0-x86_64-19.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/aaa_terminfo-6.3-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/bash-5.1.016-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/bin-11.1-x86_64-5.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/bzip2-1.0.8-x86_64-3.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/coreutils-9.0-x86_64-3.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/cpio-2.13-x86_64-3.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/dcron-4.5-x86_64-11.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/devs-2.3.1-noarch-25.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/dialog-1.3_20211214-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/dosfstools-4.2-x86_64-2.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/e2fsprogs-1.46.5-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/etc-15.0-x86_64-17.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/eudev-3.2.11-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/file-5.41-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/findutils-4.8.0-x86_64-3.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/gawk-5.1.1-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/glibc-zoneinfo-2021e-noarch-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/grep-3.7-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/gzip-1.11-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/hostname-3.23-x86_64-3.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/less-590-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/lzlib-1.13-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/ntfs-3g-2021.8.22-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/openssl-solibs-1.1.1m-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/pkgtools-15.0-noarch-42.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/sed-4.8-x86_64-3.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/shadow-4.8.1-x86_64-12.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/sysvinit-3.01-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/sysvinit-functions-8.53-x86_64-5.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/sysvinit-scripts-15.0-noarch-8.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/tar-1.34-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/time-1.9-x86_64-4.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/util-linux-2.37.3-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/which-2.21-x86_64-4.txz
+https://slackware.uk/slackware/slackware64/slackware64/a/xz-5.2.5-x86_64-3.txz
+https://slackware.uk/slackware/slackware64/slackware64/ap/alsa-utils-1.2.5.1-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/ap/htop-3.1.2-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/ap/nano-6.0-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/ap/neofetch-20211210_ccd5d9f5-noarch-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/ap/slackpkg-15.0.10-noarch-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/l/ncurses-6.3-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/l/icu4c-69.1-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/l/libedit-20210910_3.1-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/n/iproute2-5.16.0-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/n/libgcrypt-1.9.4-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/n/libgpg-error-1.44-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/n/openresolv-3.12.0-noarch-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/n/openssl-1.1.1m-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/n/wget2-2.0.0-x86_64-2.txz
+https://slackware.uk/slackware/slackware64/slackware64/n/gnupg2-2.2.33-x86_64-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/n/ca-certificates-20211216-noarch-1.txz
+https://slackware.uk/slackware/slackware64/slackware64/n/libassuan-2.5.5-x86_64-1.txz
+
+
+
+
+
+
 sudo ./sbin/installpkg --root /mnt *.txz
 
 
