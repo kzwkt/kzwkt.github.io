@@ -2,9 +2,9 @@
 
 sudo dnf install cgpt pv    
 
-find latest brunch release branch at this time its r125  
-https://github.com/sebanc/brunch/tree/r125   
-grab https://github.com/sebanc/brunch/blob/r125/scripts/chromeos-install.sh   
+find latest brunch release branch at this time its r126  
+https://github.com/sebanc/brunch/tree/r126   
+grab https://github.com/sebanc/brunch/blob/r126/scripts/chromeos-install.sh   
 
 get rid of these lines from install_singleboot()   
 
