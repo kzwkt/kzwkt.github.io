@@ -3,3 +3,5 @@ title: Home
 description: >
   BLog post for things i want to find later, like a public clipboard 
   
+header_pages:
+  - about.md
