@@ -37,6 +37,9 @@ jobs:
           destination: ./_posts
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        env:
+          JEKYLL_ENV: production
+          JEKYLL_GITHUB_TOKEN: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
 
   # Deployment job
   deploy:
