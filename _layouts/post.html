@@ -22,9 +22,15 @@
 </head>
 <body>
     <!-- Your post content -->
+    <article>
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+    </article>
 
     <!-- Edit on GitHub button -->
-    <a href="https://github.com/kzwkt/kzwkt.github.io/edit/main/_posts/{{ page.date | date: '%Y-%m-%d' }}-flex-install-from-linux.md" class="edit-button" target="_blank">
+    {% assign formatted_date = page.date | date: '%Y-%m-%d' %}
+    {% assign slug = page.title | slugify %}
+    <a href="https://github.com/kzwkt/kzwkt.github.io/edit/main/_posts/{{ formatted_date }}-{{ slug }}.md" class="edit-button" target="_blank">
         Edit on GitHub
     </a>
 
