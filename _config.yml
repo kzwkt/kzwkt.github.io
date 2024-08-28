@@ -4,7 +4,7 @@ description: >
   BLog post for things i want to find later, like a public clipboard 
   
 #theme: minima for old version
-remote_theme: jekyll/minima
+remote_theme: jekyll/the-plain
 
 plugins:
   - jekyll-feed
