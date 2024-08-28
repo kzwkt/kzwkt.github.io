@@ -15,8 +15,6 @@ plugins:
 header_pages:
   - about.md
 
-minima:
- skin: auto
 
 markdown: GFM
 
