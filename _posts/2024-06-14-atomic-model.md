@@ -1,8 +1,5 @@
 ---
 layout: post
-title: "atomic model history"
-permalink: hist-atomic-model
-date: 2024-06-14
 categories: [physics,science,atomic-model]
 author:
 - Kailash
