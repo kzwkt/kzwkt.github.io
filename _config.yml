@@ -5,3 +5,5 @@ description: >
   
 header_pages:
   - about.md
+
+theme: minima
