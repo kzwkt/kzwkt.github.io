@@ -3,20 +3,3 @@ title: Home
 description: >
   BLog post for things i want to find later, like a public clipboard 
   
-#theme: minima for old version
-remote_theme: jekyll/the-plain
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-remote-theme
-  - jekyll-sitemap
-
-header_pages:
-  - about.md
-
-
-markdown: GFM
-
-
-
