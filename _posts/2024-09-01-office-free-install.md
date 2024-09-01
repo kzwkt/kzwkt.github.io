@@ -45,7 +45,8 @@ online config generator
 
 https://config.office.com/deploymentsettings    
 
-Configuration.xml
+Configuration.xml   
+```
 <Configuration ID="ff11f9ec-a846-41ff-96db-dcd293680cb6">
   <Add OfficeClientEdition="64" Channel="Current">
     <Product ID="O365BusinessEEANoTeamsRetail">
@@ -63,7 +64,7 @@ Configuration.xml
   <RemoveMSI />
   <Display Level="Full" AcceptEULA="TRUE" />
 </Configuration>
-
+```
 
 
 
