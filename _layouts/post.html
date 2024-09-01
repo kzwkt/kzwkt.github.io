@@ -11,39 +11,57 @@
             color: #000000;
             transition: background-color 0.3s, color 0.3s;
         }
+
         /* Dark mode styles */
         body.dark-mode {
             background-color: #000000;
             color: #ffffff;
         }
+
         /* Toggle switch styles */
         .theme-toggle {
             position: fixed;
             top: 1rem;
             right: 1rem;
+            cursor: pointer;
             display: flex;
             align-items: center;
-            cursor: pointer;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(to right, #ffffff 50%, #000000 50%);
+            transition: background-color 0.3s;
+            color: #ffffff;
+            font-size: 18px;
+            text-align: center;
+            line-height: 50px;
         }
-        .theme-toggle input {
-            display: none;
+
+        .theme-toggle:before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background-color: #000000;
+            border-radius: 50%;
+            position: absolute;
+            transition: transform 0.3s;
+            transform: translateX(0);
         }
-        .theme-toggle label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
+
+        body.dark-mode .theme-toggle {
+            background: linear-gradient(to right, #000000 50%, #ffffff 50%);
         }
-        .theme-toggle span {
-            margin-left: 0.5rem;
+
+        body.dark-mode .theme-toggle:before {
+            transform: translateX(24px);
         }
     </style>
 </head>
 <body>
     <div class="theme-toggle">
-        <input type="checkbox" id="theme-toggle">
-        <label for="theme-toggle">
-            <span>Dark Mode</span>
-        </label>
+        <span>&#9728;</span> <!-- Sun icon -->
+        <span>&#9790;</span> <!-- Moon icon -->
     </div>
 
     <article>
@@ -55,21 +73,16 @@
     </article>
 
     <script>
-        // Function to apply dark mode based on stored preference
         function applyDarkMode() {
             const darkMode = localStorage.getItem('dark-mode') === 'true';
             document.body.classList.toggle('dark-mode', darkMode);
-            document.getElementById('theme-toggle').checked = darkMode;
         }
 
-        // Event listener for the toggle switch
-        document.getElementById('theme-toggle').addEventListener('change', (event) => {
-            const darkMode = event.target.checked;
-            document.body.classList.toggle('dark-mode', darkMode);
+        document.querySelector('.theme-toggle').addEventListener('click', () => {
+            const darkMode = document.body.classList.toggle('dark-mode');
             localStorage.setItem('dark-mode', darkMode);
         });
 
-        // Apply dark mode on page load
         document.addEventListener('DOMContentLoaded', applyDarkMode);
     </script>
 </body>
