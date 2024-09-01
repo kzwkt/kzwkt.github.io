@@ -33,15 +33,14 @@ body[data-theme='dark'] .circle-button {
 }
 
 .circle-button::before {
-    content: '';
+    content: '☀'; /* Default icon */
     display: block;
-    width: 12px; /* Size of the inner circle */
-    height: 12px; /* Size of the inner circle */
-    border-radius: 50%;
-    background-color: #000; /* Default inner circle color */
-    transition: background-color 0.3s;
+    color: #000; /* Default icon color */
+    font-size: 14px; /* Icon size */
+    transition: color 0.3s;
 }
 
 body[data-theme='dark'] .circle-button::before {
-    background-color: #fff; /* Dark mode inner circle color */
+    content: '☾'; /* Dark mode icon */
+    color: #fff; /* Dark mode icon color */
 }
