@@ -1,15 +1,22 @@
-# _plugins/generate_search_json.rb
-require 'json'
+module Jekyll
+  class GenerateSearchJson < Generator
+    safe true
+    priority :low
 
-Jekyll::Hooks.register :site, :post_write do |site|
-  posts = site.posts.docs.map do |post|
-    {
-      'title' => post.data['title'],
-      'url' => post.url,
-      'content' => post.content
-    }
-  end
-  File.open(site.source + '/search.json', 'w') do |f|
-    f.write(posts.to_json)
+    def generate(site)
+      search_data = []
+
+      site.posts.docs.each do |post|
+        search_data << {
+          "title" => post.data["title"],
+          "url" => post.url,
+          "content" => post.content
+        }
+      end
+
+      File.open(File.join(site.dest, 'search.json'), 'w') do |f|
+        f.write(JSON.pretty_generate(search_data))
+      end
+    end
   end
 end
