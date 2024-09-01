@@ -1,0 +1,51 @@
+/* Light mode styles */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Toggle switch styles */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem; /* Smaller width */
+    height: 3rem; /* Smaller height */
+    border-radius: 50%;
+    background: linear-gradient(to right, #ffffff 50%, #000000 50%);
+    transition: background-color 0.3s;
+    color: #ffffff;
+    font-size: 1.2rem; /* Smaller font size */
+    text-align: center;
+    line-height: 3rem; /* Match height */
+}
+
+.theme-toggle:before {
+    content: '';
+    width: 1.2rem; /* Smaller toggle knob */
+    height: 1.2rem; /* Smaller toggle knob */
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.3s;
+    transform: translateX(0);
+}
+
+body.dark-mode .theme-toggle {
+    background: linear-gradient(to right, #000000 50%, #ffffff 50%);
+}
+
+body.dark-mode .theme-toggle:before {
+    transform: translateX(1.5rem); /* Adjust to match smaller size */
+}
