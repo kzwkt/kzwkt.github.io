@@ -1,51 +1,46 @@
-/* Light mode styles */
-body {
-    background-color: #ffffff;
-    color: #000000;
-    transition: background-color 0.3s, color 0.3s;
+/* Dark Mode Styles */
+body[data-theme='dark'] {
+    background-color: #333;
+    color: #fff;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #000000;
-    color: #ffffff;
+body[data-theme='dark'] .circle-button {
+    background-color: #333;
+    border: 2px solid #fff;
 }
 
-/* Toggle switch styles */
-.theme-toggle {
+body[data-theme='light'] {
+    background-color: #fff;
+    color: #000;
+}
+
+body[data-theme='light'] .circle-button {
+    background-color: #fff;
+    border: 2px solid #000;
+}
+
+.circle-button {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #000; /* Border color matches the default theme */
+    background-color: #fff;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3rem; /* Smaller width */
-    height: 3rem; /* Smaller height */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.circle-button:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    background: linear-gradient(to right, #ffffff 50%, #000000 50%);
+    background-color: #000; /* Remove this line if you want no dot */
     transition: background-color 0.3s;
-    color: #ffffff;
-    font-size: 1.2rem; /* Smaller font size */
-    text-align: center;
-    line-height: 3rem; /* Match height */
-}
-
-.theme-toggle:before {
-    content: '';
-    width: 1.2rem; /* Smaller toggle knob */
-    height: 1.2rem; /* Smaller toggle knob */
-    background-color: #000000;
-    border-radius: 50%;
-    position: absolute;
-    transition: transform 0.3s;
-    transform: translateX(0);
-}
-
-body.dark-mode .theme-toggle {
-    background: linear-gradient(to right, #000000 50%, #ffffff 50%);
-}
-
-body.dark-mode .theme-toggle:before {
-    transform: translateX(1.5rem); /* Adjust to match smaller size */
 }
