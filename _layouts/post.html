@@ -1,39 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>{{ page.title | default: site.title }}</title>
-    <style>
-        .edit-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 14px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            text-align: center;
-            margin: 20px 0;
-        }
-        .edit-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
 </head>
 <body>
-    <!-- Your post content -->
+    <header>
+        <h1>{{ site.title }}</h1>
+    </header>
     <article>
-        <h1>{{ page.title }}</h1>
-        {{ content }}
+        <h2>{{ page.title }}</h2>
+        <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
+        <div>
+            {{ content }}
+        </div>
     </article>
-
-    <!-- Edit on GitHub button -->
-    {% assign formatted_date = page.date | date: '%Y-%m-%d' %}
-    {% assign slug = page.title | slugify %}
-    <a href="https://github.com/kzwkt/kzwkt.github.io/edit/main/_posts/{{ formatted_date }}-{{ slug }}.md" class="edit-button" target="_blank">
-        Edit on GitHub
-    </a>
-
-    <!-- Additional content -->
+    <footer>
+        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    </footer>
 </body>
 </html>
