@@ -6,7 +6,6 @@ description: >
 header_pages:
   - about.md
 
-remote_theme: no-style-please
 
 plugins:
   - jekyll-feed
@@ -14,9 +13,5 @@ plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
 
-minima:
- skin: auto
-
- 
-  
+   
 baseurl: ""
