@@ -6,7 +6,7 @@ description: >
 header_pages:
   - about.md
 
-remote_theme: jekyll/minima
+remote_theme: no-style-please
 
 plugins:
   - jekyll-feed
