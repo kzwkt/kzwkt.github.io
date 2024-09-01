@@ -65,6 +65,8 @@ Configuration.xml
   <Display Level="Full" AcceptEULA="TRUE" />
 </Configuration>
 ```
+[https://learn.microsoft.com/en-us/microsoft-365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run]
+
 
 
 
