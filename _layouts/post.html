@@ -4,59 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <style>
-        /* Light mode styles */
-        body {
-            background-color: #ffffff;
-            color: #000000;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #000000;
-            color: #ffffff;
-        }
-
-        /* Toggle switch styles */
-        .theme-toggle {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(to right, #ffffff 50%, #000000 50%);
-            transition: background-color 0.3s;
-            color: #ffffff;
-            font-size: 18px;
-            text-align: center;
-            line-height: 50px;
-        }
-
-        .theme-toggle:before {
-            content: '';
-            width: 24px;
-            height: 24px;
-            background-color: #000000;
-            border-radius: 50%;
-            position: absolute;
-            transition: transform 0.3s;
-            transform: translateX(0);
-        }
-
-        body.dark-mode .theme-toggle {
-            background: linear-gradient(to right, #000000 50%, #ffffff 50%);
-        }
-
-        body.dark-mode .theme-toggle:before {
-            transform: translateX(24px);
-        }
-    </style>
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
 </head>
 <body>
     <div class="theme-toggle">
@@ -71,19 +19,7 @@
             {{ content }}
         </div>
     </article>
-
-    <script>
-        function applyDarkMode() {
-            const darkMode = localStorage.getItem('dark-mode') === 'true';
-            document.body.classList.toggle('dark-mode', darkMode);
-        }
-
-        document.querySelector('.theme-toggle').addEventListener('click', () => {
-            const darkMode = document.body.classList.toggle('dark-mode');
-            localStorage.setItem('dark-mode', darkMode);
-        });
-
-        document.addEventListener('DOMContentLoaded', applyDarkMode);
-    </script>
+    <script src="{{ '/assets/darkmode.js' | relative_url }}"></script>
+  
 </body>
 </html>
