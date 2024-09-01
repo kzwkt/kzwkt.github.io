@@ -24,4 +24,11 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+
+defaults:
+  - scope:
+      path: "_posts"  
+    values:
+      layout: "post"
+      
   
