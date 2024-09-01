@@ -1,19 +1,5 @@
 title: Home
-
-description: >
-  BLog post for things i want to find later, like a public clipboard 
   
-header_pages:
-  - about.md
-
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-remote-theme
-  - jekyll-sitemap
-
-   
 baseurl: ""
 
 
