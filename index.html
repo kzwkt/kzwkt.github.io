@@ -1,61 +1,24 @@
+---
+layout: post
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        article {
-            margin: 20px 0;
-        }
-        h2 {
-            font-size: 24px;
-        }
-        p em {
-            color: gray;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Blog</h1>
-    </header>
-    <main id="content">
-        <!-- Posts will be dynamically inserted here -->
+
+    <main>
+        <h2>Blog Posts</h2>
+        <ul>
+            {% for post in site.posts %}
+                <li>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    <span>{{ post.date | date: "%B %d, %Y" }}</span>
+                </li>
+            {% endfor %}
+        </ul>
     </main>
-    <footer>
-        <p>&copy; <span id="year"></span> Blog</p>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const content = document.getElementById('content');
-            const yearSpan = document.getElementById('year');
-
-            // List of HTML files (manually add if necessary)
-            const posts = [
-                { title: "My Post Title", url: "posts/my-post-title.html" },
-                // Add more posts here
-            ];
-
-            // Display posts
-            posts.forEach(post => {
-                const article = document.createElement('article');
-                const postTitle = document.createElement('h2');
-                const postLink = document.createElement('a');
-                postLink.href = post.url;
-                postLink.textContent = post.title;
-                postTitle.appendChild(postLink);
-                article.appendChild(postTitle);
-                content.appendChild(article);
-            });
-
-            // Display current year
-            yearSpan.textContent = new Date().getFullYear();
-        });
-    </script>
 </body>
 </html>
