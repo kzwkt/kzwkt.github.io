@@ -4,10 +4,18 @@ markdown: kramdown
 kramdown:
   input: GFM
 
+plugins:
+  - jekyll-search
+
+  
+
 defaults:
   - scope:
       path: "_posts"  
     values:
       layout: "post"
+
+      
+
       
   
