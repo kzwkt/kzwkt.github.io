@@ -1,8 +1,37 @@
+/* Dark Mode Styles */
 body {
-    background-color: #333;
-    color: #fff;
+    background-color: #000; /* Black background */
+    color: #fff;            /* White text color */
+    font-family: Arial, sans-serif; /* Choose a readable font */
+    margin: 0;
+    padding: 0;
 }
 
 a {
-    color: #1e90ff; /* Example link color for dark mode */
+    color: #1e90ff; /* Light blue link color for contrast */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff; /* White headings */
+}
+
+p {
+    margin: 0 0 1em; /* Add spacing between paragraphs */
+}
+
+/* Additional styling for readability */
+header, footer, article {
+    padding: 1em; /* Padding for main sections */
+}
+
+code, pre {
+    background-color: #222; /* Slightly lighter background for code blocks */
+    color: #f8f8f2; /* Light text color for code */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
 }
