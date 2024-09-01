@@ -3,18 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }}</title>
+    <title id="page-title"></title>
 </head>
 <body>
-       <article>
-        <h2>{{ page.title }}</h2>
-        <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
-        <div>
-            {{ content }}
-        </div>
+    <article>
+        <h2 id="post-title"></h2>
+        <p><em id="post-date"></em></p>
+        <div id="post-content"></div>
     </article>
     <footer>
-        <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}</p>
+        <p>&copy; <span id="current-year"></span> My Static Site</p>
     </footer>
+
+    <script>
+        // Example data for a blog post
+        const post = {
+            title: "My First Post",
+            date: "September 01, 2024",
+            content: "<p>This is the content of my first post.</p>"
+        };
+
+        // Set the page title
+        document.getElementById('page-title').textContent = post.title;
+
+        // Set the post title
+        document.getElementById('post-title').textContent = post.title;
+
+        // Set the post date
+        document.getElementById('post-date').textContent = post.date;
+
+        // Set the post content
+        document.getElementById('post-content').innerHTML = post.content;
+
+        // Set the current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
