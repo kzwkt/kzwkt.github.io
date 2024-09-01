@@ -1,4 +1,4 @@
-download  Office Deployment Tool (ODT)  
+tdownload  Office Deployment Tool (ODT)  
 https://learn.microsoft.com/en-us/microsoft-365-apps/deploy/overview-office-deployment-tool   
 https://www.microsoft.com/en-ca/download/details.aspx?id=49117  
 
@@ -65,7 +65,7 @@ Configuration.xml
   <Display Level="Full" AcceptEULA="TRUE" />
 </Configuration>
 ```
-[https://learn.microsoft.com/en-us/microsoft-365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run]
+(https://learn.microsoft.com/en-us/microsoft-365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run)
 
 
 
