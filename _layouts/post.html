@@ -3,14 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+        /* Light mode styles */
+        body {
+            background-color: #ffffff;
+            color: #000000;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #000000;
+            color: #ffffff;
+        }
+        /* Toggle switch styles */
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .theme-toggle input {
+            display: none;
+        }
+        .theme-toggle label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .theme-toggle span {
+            margin-left: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-       <article>
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle">
+            <span>Dark Mode</span>
+        </label>
+    </div>
+
+    <article>
         <h2>{{ page.title }}</h2>
         <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
         <div>
             {{ content }}
         </div>
     </article>
+
+    <script>
+        // Function to apply dark mode based on stored preference
+        function applyDarkMode() {
+            const darkMode = localStorage.getItem('dark-mode') === 'true';
+            document.body.classList.toggle('dark-mode', darkMode);
+            document.getElementById('theme-toggle').checked = darkMode;
+        }
+
+        // Event listener for the toggle switch
+        document.getElementById('theme-toggle').addEventListener('change', (event) => {
+            const darkMode = event.target.checked;
+            document.body.classList.toggle('dark-mode', darkMode);
+            localStorage.setItem('dark-mode', darkMode);
+        });
+
+        // Apply dark mode on page load
+        document.addEventListener('DOMContentLoaded', applyDarkMode);
+    </script>
 </body>
 </html>
