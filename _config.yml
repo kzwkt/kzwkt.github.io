@@ -20,4 +20,4 @@ defaults:
     values:
       layout: "post"
       
-  
+  paginate: false
