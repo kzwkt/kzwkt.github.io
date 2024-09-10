@@ -1,10 +1,7 @@
 ---
 layout: post
 ---
-<body>
-
-    <main>
-        <h2>Blog Posts</h2>
+       <h2>Blog Posts</h2>
         <ul>
             {% for post in site.posts %}
                 <li>
@@ -22,7 +19,4 @@ layout: post
                 </li>
             {% endfor %}
         </ul>
-    </main>
 
-</body>
-</html>
