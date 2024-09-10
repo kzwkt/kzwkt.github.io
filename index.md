@@ -1,7 +1,6 @@
 ---
 layout: post
 ---
-       <h2>Blog Posts</h2>
 <ul>
     {% for post in site.posts %}
         <li>
@@ -11,11 +10,4 @@ layout: post
     {% endfor %}
 </ul>
 
-<h2>Other Pages</h2>
-<ul>
-    {% for page in site.pages %}
-        <li>
-            <a href="{{ page.url }}">{{ page.title }}</a>
-        </li>
-    {% endfor %}
-</ul>
+
