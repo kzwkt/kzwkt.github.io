@@ -1,11 +1,9 @@
----
-layout: post
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
 </head>
 <body>
 
@@ -19,6 +17,16 @@ layout: post
                 </li>
             {% endfor %}
         </ul>
+
+        <h2>Other Pages</h2>
+        <ul>
+            {% for page in site.pages %}
+                <li>
+                    <a href="{{ page.url }}">{{ page.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
     </main>
+
 </body>
 </html>
