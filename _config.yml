@@ -19,3 +19,5 @@ defaults:
       layout: "post"
 
 paginate: false
+
+theme: jekyll-theme-docs
