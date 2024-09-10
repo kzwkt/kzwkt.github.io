@@ -1,22 +1,13 @@
-baseurl: ""
 
 markdown: kramdown
 kramdown:
   input: GFM
 
-plugins:
-  - jekyll-search
 
 collections:
   pages:
     output: true
 
-defaults:
-  - scope:
-      path: "" 
-      type: "posts"
-    values:
-      layout: "post"
 
 paginate: false
 
