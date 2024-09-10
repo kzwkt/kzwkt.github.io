@@ -7,14 +7,11 @@ kramdown:
 plugins:
   - jekyll-search
 
-  
+ 
 
-defaults:
-  - scope:
-      path: "_posts"  
-    values:
-      layout: "post"
-
+collections:
+  pages:
+    output: true
       
 
       
