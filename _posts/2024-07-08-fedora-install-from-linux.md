@@ -274,3 +274,54 @@ dnf --config /builddir/result/image/build/image-root/kiwi_dnf4.conf -y --install
 ```
 </details>
 
+nano /etc/dnf/dnf.conf
+install_weak_deps=False
+clean_requirements_on_remove=True
+
+
+kernel-install list
+VERSION                 HAS KERNEL PATH                                    
+6.10.11-200.fc40.x86_64          ✓ /usr/lib/modules/6.10.11-200.fc40.x86_64
+
+mount /dev/nvme0n1p1 /boot/efi
+
+
+
+boot loader
+kernel-install add 6.10.11-200.fc40.x86_64  /boot/vmlinuz-6.10.11-200.fc40.x86_64.img  /boot/initramfs-6.10.11-200.fc40.x86_64.img 
+
+sudo dnf5 install NetworkManager-wifi mesa-dri-drivers kde-settings-pulseaudio  xorg-x11-server-Xorg xorg-x11-drv-libinput plasma-nm  selinux-policy wireless-regdb 
+dnf5 swap fedora-release-identity-container fedora-release-identity-kde
+dnf5 install kernel kernel-core kernel-modules
+dnf5 install plasma-desktop-wayland kwin-wayland sddm dolphin konsole PackageKit-command-not-found colord-kde kde-gtk-config kdialog  bash-completion bluedevil kdeplasma-addons plasma-discover plasma-discover-packagekit
+dnf5 install fastfetch okular gwenview pipewire plasma-pa kinfocenter pciutils usbutils kscreen  zram-generator  systemd-oomd-defaults  fwupd fwupd-efi fwupd-plugin-uefi-capsule-data  polkit-kde  firewall-config kate
+dnf5 install ark kcalc kcharselect spectacle kcm_systemd nss sddm-kcm sddm-wayland-plasma lifeograph htop nnn sddm-breeze plasma-systemmonitor upower powerdevil  dosfstools power-profiles-daemon  libva-utils
+dnf5 install intel-media-driver zram-generator-defaults rpmfusion-free-appstream-data rpmfusion-nonfree-appstream-data
+
+sudo dnf5 install @multimedia @sound-and-video ffmpeg-libs gstreamer1-plugins-{bad-*,good-*,base} gstreamer1-plugin-openh264 gstreamer1-libav --allowerasing
+ dnf5 install ffmpeg-libs  --allowerasing
+dnf5 install @sound-and-video 
+dnf install libselinux-utils selinux-policy selinux-policy-targeted policycoreutils audit sssd-kcm 
+
+
+
+dnf5 install @kde-desktop
+dnf5 install @kde-desktop-environment
+sudo dnf5 install group install Core
+
+
+. /usr/share/bash-completion/bash_completion
+
+systemctl set-default graphical.target
+
+
+touch /.autorelabel
+or fixfiles -F onboot
+disalbe selinux enforcig on /etc/selinux/config or kernel parameter enforcing=0 before relabel
+
+
+
+https://github.com/Zer0CoolX/Fedora-KDE-Minimal-Install-Guide
+
+
+
