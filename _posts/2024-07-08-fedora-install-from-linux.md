@@ -273,7 +273,7 @@ xfce-desktop-environment          Xfce Desktop                                no
 dnf --config /builddir/result/image/build/image-root/kiwi_dnf4.conf -y --installroot /builddir/result/image/build/image-root --releasever=40 --setopt=install_weak_deps=False --exclude=*-firmware --exclude=dosfstools --exclude=e2fsprogs --exclude=fuse-libs --exclude=geolite2-city --exclude=geolite2-country --exclude=glibc-langpack-en --exclude=gnupg2-smime --exclude=grubby --exclude=kernel --exclude=langpacks-en --exclude=langpacks-en_GB --exclude=libss --exclude=pinentry --exclude=pinentry --exclude=shared-mime-info --exclude=sssd-client --exclude=trousers --exclude=tzdata --exclude=util-linux --exclude=xkeyboard-config install basesystem bash coreutils fedora-release-container filesystem glibc-minimal-langpack microdnf rpm 
 ```
 </details>
-
+```
 nano /etc/dnf/dnf.conf
 install_weak_deps=False
 clean_requirements_on_remove=True
@@ -319,9 +319,9 @@ touch /.autorelabel
 or fixfiles -F onboot
 disalbe selinux enforcig on /etc/selinux/config or kernel parameter enforcing=0 before relabel
 
+```
 
-
-https://github.com/Zer0CoolX/Fedora-KDE-Minimal-Install-Guide
+https://github.com/Zer0CoolX/Fedora-KDE-Minimal-Install-Guide   
 
 
 
