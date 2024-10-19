@@ -17,7 +17,8 @@ device                  partition=\Device\HarddiskVolume1
 path                    \EFI\Microsoft\Boot\bootmgfw.efi
 description             Windows Boot Manager
 
-Bcdedit /set {bootmgr} device partition=s:     // system partition 
+Bcdedit /set {bootmgr} device partition=s:     // system partition
+Get-WmiObject Win32_LogicalDisk
 bcdedit /store bcd-template /enum all
 Bcdedit /set {bootmgr} path \efi\microsoft\boot\bootmgfw.efi
 Bcdedit /set {fwbootmgr} displayorder {bootmgr} /addfirst
