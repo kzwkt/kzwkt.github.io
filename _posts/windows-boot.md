@@ -1,18 +1,16 @@
-Fallback bootloader
+##  Fallback bootloader
  /EFI/BOOT/BOOTX64.EFI
 
 
- Windows Boot Manager
+##  Windows Boot Manager
 \EFI\Microsoft\Boot\bootmgfw.efi
 
 
-
-
-Boot Configuration Data 
+## Boot Configuration Data 
 \EFI\Microsoft\Boot\BCD
 
 
-## Windows Boot Manager
+## Windows Boot Manager BCD
 
 identifier              {bootmgr}
 device                  partition=\Device\HarddiskVolume1
@@ -24,7 +22,7 @@ bcdedit /store bcd-template /enum all
 Bcdedit /set {bootmgr} path \efi\microsoft\boot\bootmgfw.efi
 Bcdedit /set {fwbootmgr} displayorder {bootmgr} /addfirst
 
-## Windows Boot Loader
+## Windows Boot Loader BCD
 
 identifier              {9f25ee7a-e7b7-11db-94b5-f7e662935912}
 device                  partition=C:
@@ -42,7 +40,7 @@ The osdevice element specifies the partition that contains the system root.
 
 Bcdedit /set {default} path \windows\system32\winload.efi
 
-## Windows Memory Tester
+## Windows Memory Tester BCD
 
 identifier              {memdiag}
 device                  partition=\Device\HarddiskVolume1
@@ -54,25 +52,25 @@ Bcdedit /set {memdiag} path \efi\microsoft\boot\memtest.efi
 
 
 
-Windows Boot Loader 
+##  Windows Boot Loader 
 C:\Windows\System32\winload.efi
 
-Windows kernel 
+##  Windows kernel 
 C:\Windows\System32\ntoskrnl.exe
 
-Hardware Abstraction Layer (HAL) 
+##  Hardware Abstraction Layer (HAL) 
 C:\Windows\System32\hal.dll
 
-drivers
+##  drivers
 C:\Windows\System32\drivers\ 
 
-Session Manager 
+##  Session Manager 
 C:\Windows\System32\smss.exe
 
-Winlogon process 
+## Winlogon process 
 C:\Windows\System32\winlogon.exe
 
-shell
+## shell
 C:\Windows\explorer.exe
 
 
