@@ -77,10 +77,12 @@ C:\Windows\explorer.exe
 
 
 
+```
 
 bcdedit.exe /set {globalsettings} graphicsresolution 800x600
 bcdedit.exe /set {globalsettings} graphicsresolution 1024x600
 bcdedit.exe /set {globalsettings} graphicsresolution 1024x768
 bcdedit.exe /set {globalsettings} highestmode on
+```
 
 
