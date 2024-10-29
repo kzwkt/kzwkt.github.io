@@ -50,3 +50,4 @@ runit
 sudo apt install runit-systemd  runit runit-run elogind libpam-elogind orphan-sysvinit-scripts systemctl procps
 
 
+https://lecorbeausvault.wordpress.com/2022/02/07/debian-switching-init-system-easily-openrc-sysvinit-runit/
