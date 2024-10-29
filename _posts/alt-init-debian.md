@@ -42,7 +42,52 @@ https://packages.debian.org/stable/all/orphan-sysvinit-scripts/filelist
 
 
 
-/etc/inittab loads
+/etc/inittab 
+
+syntax : 
+id:runlevels:action:process
+id: A unique identifier for each entry (up to four characters).
+runlevels: Specifies the runlevels at which this entry should be executed. Each runlevel is a single digit, so multiple runlevels can be specified without separators (e.g., 123).
+action: Defines the action that init should take. Common actions include:
+ 
+    respawn: Restart the process if it terminates.
+    wait: Start the process once when entering the specified runlevel and wait for it to finish.
+    once: Start the process once when entering the specified runlevel without waiting.
+    sysinit: Run the process during system initialization.
+    initdefault: default init script to run
+    ctrlaltdel: Execute the process when Ctrl+Alt+Del is pressed.
+    powerfail: Run the process if a power failure is detected (if supported).
+    
+process: The command to execute, which can be a path to a program or a script.
+
+runlevels
+# Runlevel 0 is halt.
+# Runlevel 1 is single-user.
+# Runlevels 2-5 are multi-user.
+# Runlevel 6 is reboot.
+debian has runkevel in folder /etc/rc0.d,rc1.d....rc6.d,rcS.d
+
+scripts in runlevels are renamed SXX or KXX to enable or disable  
+
+example :
+id:2:initdefault:
+
+# Boot-time system configuration/initialization script.
+# This is run first except when booting in emergency (-b) mode.
+si::sysinit:/etc/init.d/rcS
+empty runlevel here means that the process defined by this entry runs at the system initialization stage before the runlevel is set. 
+
+~~:S:wait:/sbin/sulogin --force
+
+
+l0:0:wait:/etc/init.d/rc 0
+
+ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now
+
+
+
+ps aux | head
+
 
 
 
