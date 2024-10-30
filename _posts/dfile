@@ -1,0 +1,578 @@
+apt list ?essential 
+apt-cache show ~E | grep -Po '(?<=^Package: ).*'
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+dpkg
+debianutils
+init-system-helpers
+apt
+dash
+sysvinit-utils
+gzip
+bash
+util-linux
+tar
+base-files
+base-passwd
+sed
+bsdutils
+coreutils
+findutils
+grep
+login
+perl-base
+diffutils
+libc-bin
+libc-bin
+hostname
+ncurses-bin
+ncurses-base
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  dpkg
+  /etc/cron.daily/dpkg
+  /etc/alternatives/README
+/etc/dpkg/dpkg.cfg.d
+/etc/logrotate.d/alternatives
+/etc/logrotate.d/dpkg
+/lib/systemd/system/dpkg-db-backup.service
+/lib/systemd/system/dpkg-db-backup.timer
+  /sbin/start-stop-daemon
+/usr/bin/dpkg
+/usr/bin/dpkg-deb
+/usr/bin/dpkg-divert
+/usr/bin/dpkg-maintscript-helper
+/usr/bin/dpkg-query
+/usr/bin/dpkg-realpath
+/usr/bin/dpkg-split
+/usr/bin/dpkg-statoverride
+/usr/bin/dpkg-trigger
+/usr/bin/update-alternatives
+  /usr/libexec/dpkg
+/usr/libexec/dpkg/dpkg-db-backup
+  /usr/sbin/dpkg-fsys-usrunmess
+/usr/share/polkit-1/actions
+/usr/share/polkit-1/actions/org.dpkg.pkexec.update-alternatives.policy
+  /var/lib/dpkg/alternatives
+/var/lib/dpkg/info
+/var/lib/dpkg/parts
+/var/lib/dpkg/updates
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  debianutils
+  /bin/run-parts
+/bin/tempfile
+  /sbin/installkernel
+/usr/bin/ischroot
+/usr/bin/savelog
+/usr/bin/which.debianutils
+  /usr/sbin/add-shell
+/usr/sbin/remove-shell
+/usr/sbin/update-shells
+  /usr/share/debianutils/shells
+/usr/share/debianutils/shells.d
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  init-system-helpers
+  /etc/rc0.d
+/etc/rc1.d
+/etc/rc2.d
+/etc/rc3.d
+/etc/rc4.d
+/etc/rc5.d
+/etc/rc6.d
+/etc/rcS.d
+  /etc/systemd/system
+/usr/bin/deb-systemd-helper
+/usr/bin/deb-systemd-invoke
+  /usr/sbin/invoke-rc.d
+/usr/sbin/service
+/usr/sbin/update-rc.d
+  /var/lib/systemd
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  apt
+  /etc/apt/apt.conf.d
+/etc/apt/keyrings
+/etc/apt/preferences.d
+/etc/apt/sources.list.d
+/etc/apt/trusted.gpg.d
+/etc/cron.daily/apt-compat
+/etc/kernel/postinst.d
+/etc/logrotate.d/apt
+/lib/systemd/system/apt-daily-upgrade.service
+/lib/systemd/system/apt-daily-upgrade.timer
+/lib/systemd/system/apt-daily.service
+/lib/systemd/system/apt-daily.timer
+  /usr/bin/apt
+/usr/bin/apt-cache
+/usr/bin/apt-cdrom
+/usr/bin/apt-config
+/usr/bin/apt-get
+/usr/bin/apt-key
+/usr/bin/apt-mark
+/usr/lib/apt/apt-helper
+/usr/lib/apt/apt.systemd.daily
+/usr/lib/apt/methods
+/usr/lib/apt/methods/cdrom
+/usr/lib/apt/methods/copy
+/usr/lib/apt/methods/file
+/usr/lib/apt/methods/ftp
+/usr/lib/apt/methods/gpgv
+/usr/lib/apt/methods/http
+/usr/lib/apt/methods/mirror
+/usr/lib/apt/methods/rred
+/usr/lib/apt/methods/rsh
+/usr/lib/apt/methods/store
+/usr/lib/apt/planners
+/usr/lib/apt/solvers
+/usr/lib/apt/solvers/dump
+/usr/lib/dpkg
+/usr/lib/dpkg/methods
+/usr/lib/dpkg/methods/apt
+/usr/lib/dpkg/methods/apt/desc.apt
+/usr/lib/dpkg/methods/apt/install
+/usr/lib/dpkg/methods/apt/names
+/usr/lib/dpkg/methods/apt/setup
+/usr/lib/dpkg/methods/apt/update
+/usr/lib/x86_64-linux-gnu
+/usr/lib/x86_64-linux-gnu/libapt-private.so.0.0.0
+ /usr/share/doc/apt
+  /var/cache/apt
+  /var/lib/apt
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  dash
+  /bin/dash
+/usr/share/debianutils/shells.d/dash
+  /bin/sh
+package diverts others to: /bin/sh.distrib
+/usr/share/man/man1/sh.1.gz
+package diverts others to: /usr/share/man/man1/sh.distrib.1.gz
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  sysvinit-utils
+ /lib/init/init-d-script
+ /lib/init/vars.sh
+  /lib/lsb/init-functions
+/lib/lsb/init-functions.d/00-verbose
+/sbin/fstab-decode
+/sbin/killall5
+  /bin/pidof
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  gzip 
+  /bin/gunzip
+/bin/gzexe
+/bin/gzip
+/bin/uncompress
+/bin/zcat
+/bin/zcmp
+/bin/zdiff
+/bin/zegrep
+/bin/zfgrep
+/bin/zforce
+/bin/zgrep
+/bin/zless
+/bin/zmore
+/bin/znew
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  bash
+  /bin/bash
+  /etc/bash.bashrc
+/etc/skel/.bash_logout
+/etc/skel/.bashrc
+/etc/skel/.profile
+  /usr/bin/bashbug
+/usr/bin/clear_console
+  /usr/share/debianutils/shells.d/bash
+  /usr/share/doc/bash
+/usr/share/menu/bash
+  /bin/rbash
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  util-linux
+  /bin/dmesg
+/bin/findmnt
+/bin/lsblk
+/bin/more
+/bin/mountpoint
+/bin/su
+/bin/wdctl
+ /etc/pam.d/runuser
+/etc/pam.d/runuser-l
+/etc/pam.d/su
+/etc/pam.d/su-l
+  /lib/systemd/system/fstrim.service
+/lib/systemd/system/fstrim.timer
+  /sbin/agetty
+/sbin/blkdiscard
+/sbin/blkid
+/sbin/blkzone
+/sbin/blockdev
+/sbin/chcpu
+/sbin/ctrlaltdel
+/sbin/findfs
+/sbin/fsck
+/sbin/fsck.cramfs
+/sbin/fsck.minix
+/sbin/fsfreeze
+/sbin/fstrim
+/sbin/isosize
+/sbin/mkfs
+/sbin/mkfs.bfs
+/sbin/mkfs.cramfs
+/sbin/mkfs.minix
+/sbin/mkswap
+/sbin/pivot_root
+/sbin/runuser
+/sbin/sulogin
+/sbin/swaplabel
+/sbin/switch_root
+/sbin/wipefs
+/sbin/zramctl
+  /usr/bin/addpart
+/usr/bin/choom
+/usr/bin/chrt
+/usr/bin/delpart
+/usr/bin/fallocate
+/usr/bin/flock
+/usr/bin/getopt
+/usr/bin/hardlink
+/usr/bin/ionice
+/usr/bin/ipcmk
+/usr/bin/ipcrm
+/usr/bin/ipcs
+/usr/bin/last
+/usr/bin/lscpu
+/usr/bin/lsipc
+/usr/bin/lslocks
+/usr/bin/lslogins
+/usr/bin/lsmem
+/usr/bin/lsns
+/usr/bin/mcookie
+/usr/bin/mesg
+/usr/bin/namei
+/usr/bin/nsenter
+/usr/bin/partx
+/usr/bin/prlimit
+/usr/bin/rename.ul
+/usr/bin/resizepart
+/usr/bin/rev
+/usr/bin/setarch
+/usr/bin/setpriv
+/usr/bin/setsid
+/usr/bin/setterm
+/usr/bin/taskset
+/usr/bin/uclampset
+/usr/bin/unshare
+/usr/bin/utmpdump
+/usr/bin/whereis
+  /usr/lib/mime/packages/util-linux
+  /usr/sbin/chmem
+/usr/sbin/ldattach
+/usr/sbin/readprofile
+/usr/sbin/rtcwake
+  /sbin/getty
+  /usr/bin/i386
+/usr/bin/lastb
+/usr/bin/linux32
+/usr/bin/linux64
+/usr/bin/x86_64
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  tar
+  /bin/tar
+  /usr/lib/mime/packages/tar
+/usr/sbin/rmt-tar
+/usr/sbin/tarcat
+  /etc/rmt
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    base-files
+all root dirs 
+ /etc/debian_version
+/etc/default
+/etc/dpkg/origins/debian
+/etc/host.conf
+/etc/issue
+/etc/issue.net
+/etc/profile.d
+/etc/skel
+/etc/update-motd.d
+/etc/update-motd.d/10-uname
+/usr/lib/os-release
+/usr/share/base-files/dot.bashrc
+/usr/share/base-files/dot.profile
+/usr/share/base-files/dot.profile.md5sums
+/usr/share/base-files/info.dir
+/usr/share/base-files/motd
+/usr/share/base-files/profile
+/usr/share/base-files/profile.md5sums
+/usr/share/base-files/staff-group-for-usr-local
+/etc/os-release
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  base-passwd
+  /usr/sbin/update-passwd
+/usr/share/base-passwd/group.master
+/usr/share/base-passwd/passwd.master
+  /usr/share/doc/base-passwd
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  sed
+  /bin/sed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    bsdutils
+ /usr/bin/logger
+/usr/bin/renice
+/usr/bin/script
+/usr/bin/scriptlive
+/usr/bin/scriptreplay
+/usr/bin/wall
+ /usr/share/lintian/overrides/bsdutils
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+coreutils
+  /bin/cat
+/bin/chgrp
+/bin/chmod
+/bin/chown
+/bin/cp
+/bin/date
+/bin/dd
+/bin/df
+/bin/dir
+/bin/echo
+/bin/false
+/bin/ln
+/bin/ls
+/bin/mkdir
+/bin/mknod
+/bin/mktemp
+/bin/mv
+/bin/pwd
+/bin/readlink
+/bin/rm
+/bin/rmdir
+/bin/sleep
+/bin/stty
+/bin/sync
+/bin/touch
+/bin/true
+/bin/uname
+/bin/vdir
+  /usr/bin/[
+/usr/bin/arch
+/usr/bin/b2sum
+/usr/bin/base32
+/usr/bin/base64
+/usr/bin/basename
+/usr/bin/basenc
+/usr/bin/chcon
+/usr/bin/cksum
+/usr/bin/comm
+/usr/bin/csplit
+/usr/bin/cut
+/usr/bin/dircolors
+/usr/bin/dirname
+/usr/bin/du
+/usr/bin/env
+/usr/bin/expand
+/usr/bin/expr
+/usr/bin/factor
+/usr/bin/fmt
+/usr/bin/fold
+/usr/bin/groups
+/usr/bin/head
+/usr/bin/hostid
+/usr/bin/id
+/usr/bin/install
+/usr/bin/join
+/usr/bin/link
+/usr/bin/logname
+/usr/bin/md5sum
+/usr/bin/mkfifo
+/usr/bin/nice
+/usr/bin/nl
+/usr/bin/nohup
+/usr/bin/nproc
+/usr/bin/numfmt
+/usr/bin/od
+/usr/bin/paste
+/usr/bin/pathchk
+/usr/bin/pinky
+/usr/bin/pr
+/usr/bin/printenv
+/usr/bin/printf
+/usr/bin/ptx
+/usr/bin/realpath
+/usr/bin/runcon
+/usr/bin/seq
+/usr/bin/sha1sum
+/usr/bin/sha224sum
+/usr/bin/sha256sum
+/usr/bin/sha384sum
+/usr/bin/sha512sum
+/usr/bin/shred
+/usr/bin/shuf
+/usr/bin/sort
+/usr/bin/split
+/usr/bin/stat
+/usr/bin/stdbuf
+/usr/bin/sum
+/usr/bin/tac
+/usr/bin/tail
+/usr/bin/tee
+/usr/bin/test
+/usr/bin/timeout
+/usr/bin/tr
+/usr/bin/truncate
+/usr/bin/tsort
+/usr/bin/tty
+/usr/bin/unexpand
+/usr/bin/uniq
+/usr/bin/unlink
+/usr/bin/users
+/usr/bin/wc
+/usr/bin/who
+/usr/bin/whoami
+/usr/bin/yes
+/usr/libexec/coreutils
+/usr/libexec/coreutils/libstdbuf.so
+  /usr/sbin/chroot
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  findutils
+  /usr/bin/find
+/usr/bin/xargs
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  grep
+  /bin/egrep
+/bin/fgrep
+/bin/grep
+  /usr/bin/rgrep
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  login
+  /bin/login
+  /etc/login.defs
+/etc/pam.d/login
+/usr/bin/faillog
+/usr/bin/lastlog
+/usr/bin/newgrp
+  /usr/sbin/nologin
+  /usr/bin/sg
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  perl-base
+  /usr/bin/perl
+/usr/bin/perl5.36.0
+  /usr/lib/x86_64-linux-gnu/perl-base/xxxx
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+diffutils
+  /usr/bin/cmp
+/usr/bin/diff
+/usr/bin/diff3
+/usr/bin/sdiff
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  libc-bin
+  /etc/bindresvport.blacklist
+/etc/default/nss
+/etc/gai.conf
+  /etc/ld.so.conf.d/libc.conf
+/sbin/ldconfig
+/usr/bin/getconf
+/usr/bin/getent
+/usr/bin/iconv
+/usr/bin/ldd
+/usr/bin/locale
+/usr/bin/localedef
+/usr/bin/pldd
+/usr/bin/tzselect
+/usr/bin/zdump
+  /usr/lib/locale/C.utf8
+/usr/sbin/iconvconfig
+/usr/sbin/zic
+  /var/cache/ldconfig
+/usr/bin/ld.so
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  hostname 
+  /bin/hostname
+/bin/dnsdomainname
+/bin/domainname
+/bin/nisdomainname
+/bin/ypdomainname
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  ncurses-bin
+  /usr/bin/clear
+/usr/bin/infocmp
+/usr/bin/tabs
+/usr/bin/tic
+/usr/bin/toe
+/usr/bin/tput
+/usr/bin/tset
+  /usr/bin/captoinfo
+/usr/bin/infotocap
+/usr/bin/reset
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  ncurses-base
+  /etc/terminfo/README
+/lib/terminfo/xxx
+  /usr/share/tabset/xxx
+  /usr/share/terminfo
+  
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+adduser
+/etc/adduser.conf
+/etc/deluser.conf
+/usr/sbin/adduser    // perl script uses useradd,groupadd,groupmod
+/usr/sbin/deluser    // perl script 
+/usr/share/doc/adduser//*
+/usr/share/perl5/Debian/AdduserCommon.pm
+/var/cache/adduser
+/usr/sbin/addgroup
+/usr/sbin/delgroup
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  apt-utils
+  /usr/bin/apt-extracttemplates
+/usr/bin/apt-ftparchive
+/usr/bin/apt-sortpkgs
+  /usr/lib/apt/planners/apt
+/usr/lib/apt/solvers/apt
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+  at-spi2-common
+  /usr/share/doc/at-spi2-common
+/usr/share/locale/xx/LC_MESSAGES/at-spi2-core.mo
+
+
+  /etc/bash_completion
+/etc/profile.d/bash_completion.sh
+/usr/bin/dh_bash-completion
+/usr/share/bash-completion/bash_completion
+/usr/share/bash-completion/completions/xxx
+/usr/share/perl5/Debian/Debhelper/Sequence/bash_completion.pm
+/usr/share/pkgconfig/bash-completion.pc
+...
+
+
+
+  
+  
+  
+  
+  
+  
+  
