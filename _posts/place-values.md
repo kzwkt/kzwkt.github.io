@@ -101,6 +101,8 @@ For example:
     F2(9)=999F2(9)=999
     F3(9)=9999F3(9)=9999, and so on.
 
+[https://www.hellenicaworld.com/Science/Mathematics/en/HistoryLargenumbers.html]
+
 
     old hindu/buddhist
     | Name                              | Value                              |
