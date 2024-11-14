@@ -102,10 +102,11 @@ For example:
     F3(9)=9999F3(9)=9999, and so on.
 
 [https://www.hellenicaworld.com/Science/Mathematics/en/HistoryLargenumbers.html]
-
-
     old hindu/buddhist
-    | Name                              | Value                              |
+
+
+    
+| Name                              | Value                              |
 |-----------------------------------|------------------------------------|
 | lakṣá (लक्ष)                      | 10^5                               |
 | kōṭi (कोटि)                        | 10^7                               |
