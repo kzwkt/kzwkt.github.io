@@ -80,16 +80,25 @@
 
 
 other 
-| Number Name          | Description                                                              | Scientific Notation            | Context                                  |
-|----------------------|--------------------------------------------------------------------------|--------------------------------|------------------------------------------|
-| **Moser's Number**    | A large number used in Ramsey theory, often considered one of the largest known numbers with a specific known value. | Extremely large (not expressible easily in scientific notation). | Arises in combinatorial mathematics and Ramsey theory. |
-| **Graham's Number**   | A large number used in Ramsey theory, famously associated with the problem of finding a bound for the number of edges in a specific type of graph. | Defined using Knuth's up-arrow notation: `G = g_64`. | Known for its appearance in "The Book of Numbers". |
-| **Googol**            | A large number equal to \( 10^{100} \), a 1 followed by 100 zeros.     | \( 10^{100} \)                 | Famous as a large but still comprehensible number. |
-| **Googolplex**        | A large number equal to \( 10^{\text{googol}} \), or \( 10^{10^{100}} \). | \( 10^{10^{100}} \)            | A number so large it exceeds the number of atoms in the observable universe. |
-| **Skewes' Number**    | A large number that arises in number theory, specifically in the study of prime numbers and the distribution of primes. | \( 10^{10^{10^{34}}} \)       | Known for its role in an approximation of the first prime greater than a given value. |
-| **Tree(3)**           | A number that arises in the study of combinatorics and graph theory. It is extremely large, far larger than Graham's number. | Inexpressibly large.           | Comes from the study of "tree-like" structures in mathematics. |
-| **Rayo's Number**     | A large number defined using a specific system of notation, proposed as a large number beyond a googolplex. | Defined using a special notation system. | Created for use in the context of large number games. |
-| **Busy Beaver**       | The largest number of steps that a Turing machine with a specific number of states can execute before halting. | Incomputably large.           | Represents the maximum number of steps a non-halting Turing machine can take before halting, given a finite number of states. |
-| **Feigenbaum Number** | The numbers \( \delta \) and \( \alpha \) are the ratios that arise in the study of chaos theory. | 4.669... and 2.502...           | They appear in the study of the bifurcation diagram in chaotic systems. |
-| **Chaitin's Omega**   | A real number that represents the halting probability of a universal Chaitin Omega machine, which is tied to algorithmic information theory. | Incomputably large and non-recursive. | Represents the boundary between computable and uncomputable numbers. |
+| Number Name           | Expression                                                                 |
+|-----------------------|---------------------------------------------------------------------------|
+| **Moser's Number**     | \( F^{64}(9) \), where \( F^{n}(9) \) denotes iterated exponential towers with base 9. |
+| **Graham's Number**    | \( g_{64} \), where each \( g_n \) is defined recursively using **Knuth's up-arrow notation**, and it is often approximated as \( F^{g_{63}}(3) \), a tower of 3's iterated 63 times. |
+| **Googol**             | \( 10^{100} \)                                                              |
+| **Googolplex**         | \( 10^{10^{100}} \)                                                          |
+| **Skewes' Number**     | \( 10^{10^{10^{34}}} \)                                                     |
+| **Tree(3)**            | Extremely large, expressed as **\( F^{F^{F^{...}}}(3) \)**, with an incredibly deep recursive tower structure. |
+| **Rayo's Number**      | \( F^{F^{F^{...}}}(R)\), where \( R \) is a recursive number defined by Turing machines. |
+| **Busy Beaver**        | \( BB(n) \), which grows faster than any computable function. It is typically written as an iterated function with recursive definitions. |
+| **Feigenbaum Number**  | \( \delta \approx 4.669201609102990... \), constant in chaos theory. |
+| **Chaitin's Omega**    | A real number representing the halting probability of a universal Turing machine, with no specific F notation expression. |
+
+Fast-Growing Notations:
+
+    F notation: Fn(a)Fn(a) indicates an iterated exponential function, where F1(a)=aaF1(a)=aa, F2(a)=aaaF2(a)=aaa, and so on, with each step building an exponential tower.
+
+For example:
+
+    F2(9)=999F2(9)=999
+    F3(9)=9999F3(9)=9999, and so on.
 
