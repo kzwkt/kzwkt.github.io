@@ -80,18 +80,17 @@
 
 
 other 
-| Number Name           | Expression                                                                 |
-|-----------------------|---------------------------------------------------------------------------|
-| **Moser's Number**     | \( F^{64}(9) \), where \( F^{n}(9) \) denotes iterated exponential towers with base 9. |
-| **Graham's Number**    | \( g_{64} \), where each \( g_n \) is defined recursively using **Knuth's up-arrow notation**, and it is often approximated as \( F^{g_{63}}(3) \), a tower of 3's iterated 63 times. |
-| **Googol**             | \( 10^{100} \)                                                              |
-| **Googolplex**         | \( 10^{10^{100}} \)                                                          |
-| **Skewes' Number**     | \( 10^{10^{10^{34}}} \)                                                     |
-| **Tree(3)**            | Extremely large, expressed as **\( F^{F^{F^{...}}}(3) \)**, with an incredibly deep recursive tower structure. |
-| **Rayo's Number**      | \( F^{F^{F^{...}}}(R)\), where \( R \) is a recursive number defined by Turing machines. |
-| **Busy Beaver**        | \( BB(n) \), which grows faster than any computable function. It is typically written as an iterated function with recursive definitions. |
-| **Feigenbaum Number**  | \( \delta \approx 4.669201609102990... \), constant in chaos theory. |
-| **Chaitin's Omega**    | A real number representing the halting probability of a universal Turing machine, with no specific F notation expression. |
+# Large Numbers in Fast-Growing Notation
+
+| **Number Name**        | **Expression**                                                                 |
+|------------------------|-------------------------------------------------------------------------------|
+| **Moser's Number**      | `F^64(9)`                                                                      |
+| **Graham's Number**     | `g_64` or approximated as `F^{g_63}(3)`                                        |
+| **Tree(3)**             | `F^{F^{F^{...}}}(3)`                                                           |
+| **Rayo's Number**       | `F^{F^{F^{...}}}(R)`                                                           |
+| **Busy Beaver**         | `BB(n)`                                                                        |
+| **Feigenbaum Constant** | `δ ≈ 4.669201609102990...`                                                     |
+| **Chaitin's Omega**     | A real number, representing the halting probability of a Turing machine.       |
 
 Fast-Growing Notations:
 
