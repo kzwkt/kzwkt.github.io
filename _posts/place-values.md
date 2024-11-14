@@ -101,3 +101,69 @@ For example:
     F2(9)=999F2(9)=999
     F3(9)=9999F3(9)=9999, and so on.
 
+
+    old hindu/buddhist
+    | Name                              | Value                              |
+|-----------------------------------|------------------------------------|
+| lakṣá (लक्ष)                      | 10^5                               |
+| kōṭi (कोटि)                        | 10^7                               |
+| ayuta (अयुत)                       | 10^9                               |
+| niyuta (नियुत)                     | 10^13                              |
+| pakoti (पकोटि)                     | 10^14                              |
+| vivara (विवारा)                    | 10^15                              |
+| kshobhya (क्षोभ्या)                | 10^17                              |
+| vivaha (विवाहा)                    | 10^19                              |
+| kotippakoti (कोटिपकोटी)            | 10^21                              |
+| bahula (बहुल)                      | 10^23                              |
+| nagabala (नागाबाला)                | 10^25                              |
+| nahuta (नाहूटा)                    | 10^28                              |
+| titlambha (तीतलम्भा)              | 10^29                              |
+| vyavasthanapajnapati (व्यवस्थानापज्नापति) | 10^31                              |
+| hetuhila (हेतुहीला)                 | 10^33                              |
+| ninnahuta (निन्नाहुता)              | 10^35                              |
+| hetvindriya (हेत्विन्द्रिय)          | 10^37                              |
+| samaptalambha (समाप्तलम्भ)         | 10^39                              |
+| gananagati (गनानागती)               | 10^41                              |
+| akkhobini (अक्खोबिनि)              | 10^42                              |
+| niravadya (निरावाद्य)               | 10^43                              |
+| mudrabala (मुद्राबाला)             | 10^45                              |
+| sarvabala (सर्वबाला)               | 10^47                              |
+| bindu (बिंदु or बिन्दु)             | 10^49                              |
+| sarvajna (सर्वज्ञ)                  | 10^51                              |
+| vibhutangama (विभुतन्गमा)          | 10^53                              |
+| abbuda (अब्बुद)                    | 10^56                              |
+| nirabbuda (निर्बुद्ध)              | 10^63                              |
+| ahaha (अहाहा)                      | 10^70                              |
+| ababa (अबाबा)                      | 10^77                              |
+| atata (अटाटा)                      | 10^84                              |
+| soganghika (सोगान्घीक)             | 10^91                              |
+| uppala (उप्पल)                     | 10^98                              |
+| kumuda (कुमुद)                     | 10^105                             |
+| pundarika (पुन्डरीक)               | 10^112                             |
+| paduma (पद्म)                      | 10^119                             |
+| kathana (कथन)                      | 10^126                             |
+| mahakathana (महाकथन)              | 10^133                             |
+| asaṃkhyeya (असंख्येय)              | 10^140                             |
+| dhvajagranishamani (ध्वजाग्रनिशमनी) | 10^421                             |
+| bodhisattva (बोधिसत्व)             | 10^37218383881977644441306597687849648128 |
+| lalitavistarautra (ललितातुलनातारासूत्र) | 10^200 infinities                 |
+| matsya (मत्स्य)                    | 10^600 infinities                 |
+| kurma (कूर्म)                      | 10^2000 infinities                |
+| varaha (वराह)                      | 10^3600 infinities                |
+| narasimha (नरसिम्हा)               | 10^4800 infinities                |
+| vamana (वामन)                      | 10^5800 infinities                |
+| parashurama (परशुराम)             | 10^6000 infinities                |
+| rama (राम)                         | 10^6800 infinities                |
+| khrishnaraja (खृष्णराज)            | 10^infinities                     |
+| kalki (कल्कि)                      | 10^8000 infinities                |
+| balarama (बलराम)                   | 10^9800 infinities                |
+| dasavatara (दशावतार)              | 10^10000 infinities               |
+| bhagavatapurana (भागवतपुराण)       | 10^18000 infinities               |
+| avatamsakasutra (अवतांशकासूत्र)    | 10^30000 infinities               |
+| mahadeva (महादेव)                  | 10^50000 infinities               |
+| prajapati (प्रजापति)               | 10^60000 infinities               |
+| jyotiba (ज्योतिबा)                 | 10^80000 infinities               |
+| parvati (पार्वती)                  | 10^2000000000000 infinities       |
+| paro (पॅरो)                        | 10^40000000000000000000 infinities|
+
+
