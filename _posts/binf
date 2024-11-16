@@ -1,0 +1,19 @@
+install qemu-user-static
+./qemu-binfmt --register
+
+mount binfmt_misc -t binfmt_misc /proc/sys/fs/binfmt_misc
+
+fstab
+none  /proc/sys/fs/binfmt_misc binfmt_misc defaults 0 0
+
+https://wiki.archlinux.org/title/Binfmt_misc_for_Java
+
+
+zig cc -o main main.c -target aarch64-linux-musl
+
+install cross-aarch64-linux-gnu-libc
+QEMU_LD_PREFIX=/usr/aarch64-linux-gnu ./main
+
+
+
+
