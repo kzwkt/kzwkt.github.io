@@ -71,7 +71,6 @@ cat /etc/rpm/macros.image-language-conf
 glibc-langpack-en
 
  . /etc/profile.d/bash_completion.sh 
-<details>
 
    ```
  dnf5      
@@ -285,7 +284,6 @@ xfce-desktop-environment          Xfce Desktop                                no
 ```
 dnf --config /builddir/result/image/build/image-root/kiwi_dnf4.conf -y --installroot /builddir/result/image/build/image-root --releasever=40 --setopt=install_weak_deps=False --exclude=*-firmware --exclude=dosfstools --exclude=e2fsprogs --exclude=fuse-libs --exclude=geolite2-city --exclude=geolite2-country --exclude=glibc-langpack-en --exclude=gnupg2-smime --exclude=grubby --exclude=kernel --exclude=langpacks-en --exclude=langpacks-en_GB --exclude=libss --exclude=pinentry --exclude=pinentry --exclude=shared-mime-info --exclude=sssd-client --exclude=trousers --exclude=tzdata --exclude=util-linux --exclude=xkeyboard-config install basesystem bash coreutils fedora-release-container filesystem glibc-minimal-langpack microdnf rpm 
 ```
-</details>
 
 ```
 
@@ -339,7 +337,183 @@ disalbe selinux enforcig on /etc/selinux/config or kernel parameter enforcing=0 
 
 ```
 
+```
+sudo dnf group list --hidden 
+Updating and loading repositories:
+Repositories loaded.
+ID                           Name                                        Installed
+3d-printing                  3D Printing                                        no
+admin-tools                  Administration Tools                               no
+anaconda-tools               Anaconda tools                                     no
+audio                        Audio Production                                   no
+authoring-and-publishing     Authoring and Publishing                           no
+base-graphical               base-graphical                                     no
+base-x                       base-x                                             no
+basic-desktop                Basic Desktop                                      no
+budgie-desktop               Budgie                                             no
+budgie-desktop-apps          Budgie Desktop Applications                        no
+buildsys-build               Buildsystem building group                         no
+c-development                C Development Tools and Libraries                  no
+cinnamon-desktop             Cinnamon                                           no
+cloud-bootloader-tools       Bootloader tools for Cloud images                  no
+cloud-infrastructure         Cloud Infrastructure                               no
+cloud-management             Cloud Management Tools                             no
+cloud-server                 Cloud Server Tools                                 no
+compiz                       Compiz                                             no
+container-management         Container Management                               no
+core                         Core                                              yes
+cosmic-desktop               COSMIC Desktop                                     no
+cosmic-desktop-apps          COSMIC Desktop Supplementary Applications          no
+critical-path-anaconda       Critical Path (anaconda)                           no
+critical-path-apps           Critical Path (Applications)                       no
+critical-path-base           Critical Path (Base)                               no
+critical-path-build          Critical Path (Build)                              no
+critical-path-compose        Critical Path (Compose)                            no
+critical-path-deepin-desktop Critical Path (Deepin desktop)                     no
+critical-path-gnome          Critical Path (GNOME)                              no
+critical-path-kde            Critical Path (KDE)                                no
+critical-path-lxde           Critical Path (LXDE)                               no
+critical-path-lxqt           Critical Path (LXQt)                               no
+critical-path-server         Critical Path (Server)                             no
+critical-path-standard       Critical Path (standard)                           no
+critical-path-xfce           Critical Path (Xfce)                               no
+d-development                D Development Tools and Libraries                  no
+deepin-desktop               Deepin Desktop Environment                         no
+deepin-desktop-apps          Deepin Desktop Applications                        no
+deepin-desktop-media         Media packages for Deepin Desktop                  no
+deepin-desktop-office        Deepin Desktop Office                              no
+design-suite                 Design Suite                                       no
+desktop-accessibility        Desktop accessibility                              no
+development-libs             Development Libraries                              no
+development-tools            Development Tools                                  no
+dial-up                      Dial-up Networking Support                         no
+directory-server             Directory Server                                   no
+dns-server                   DNS Name Server                                    no
+dogtag                       Dogtag Certificate System                          no
+domain-client                Domain Membership                                  no
+editors                      Editors                                            no
+education                    Educational Software                               no
+electronic-lab               Electronic Lab                                     no
+engineering-and-scientific   Engineering and Scientific                         no
+enlightenment-desktop        Enlightenment                                      no
+fedora-packager              Fedora Packager                                    no
+firefox                      Firefox Web Browser                                no
+font-design                  Font design and packaging                          no
+fonts                        Fonts                                              no
+freeipa-server               FreeIPA Server                                     no
+ftp-server                   FTP Server                                         no
+games                        Games and Entertainment                            no
+gnome-desktop                GNOME                                              no
+gnome-games                  Extra games for the GNOME Desktop                  no
+gnome-software-development   GNOME Software Development                         no
+graphical-internet           Graphical Internet                                 no
+graphics                     Graphics                                           no
+guest-agents                 Guest Agents                                       no
+guest-desktop-agents         Guest Desktop Agents                               no
+ha                           High Availability                                  no
+haproxy                      HAProxy                                            no
+hardware-support             Hardware Support                                   no
+haskell                      Haskell                                            no
+headless-management          Headless Management                                no
+i3                           i3 window manager                                  no
+i3-extended                  i3 window manager (supplemental packages)          no
+input-methods                Input Methods                                      no
+java                         Java                                               no
+java-development             Java Development                                   no
+javaenterprise               Java Application Server                            no
+kde-apps                     KDE Applications                                   no
+kde-desktop                  KDE                                                no
+kde-education                KDE Educational applications                       no
+kde-media                    KDE Multimedia support                             no
+kde-mobile                   KDE Mobile                                         no
+kde-mobile-apps              KDE Mobile Apps                                    no
+kde-office                   KDE Office                                         no
+kde-pim                      KDE PIM                                            no
+kde-software-development     KDE Software Development                           no
+kde-spin-initial-setup       KDE Spin Initial Setup                             no
+kf6-software-development     KDE Frameworks 6 Software Development              no
+legacy-fonts                 Legacy Fonts                                       no
+legacy-network-server        Legacy Network Server                              no
+libreoffice                  LibreOffice                                        no
+libreoffice-development      LibreOffice Development                            no
+load-balancer                Load Balancer                                      no
+lxde-apps                    Applications for the LXDE Desktop                  no
+lxde-desktop                 LXDE                                               no
+lxde-media                   Multimedia support for LXDE                        no
+lxde-office                  LXDE Office                                        no
+lxqt-apps                    Applications for the LXQt Desktop                  no
+lxqt-desktop                 LXQt                                               no
+lxqt-l10n                    Translations of LXQt                               no
+lxqt-media                   Multimedia support for LXQt                        no
+lxqt-office                  LXQt Office                                        no
+mail-server                  Mail Server                                        no
+mate-applications            MATE Applications                                  no
+mate-desktop                 MATE                                               no
+milkymist                    Milkymist                                          no
+mingw32                      MinGW cross-compiler                               no
+miraclewm-desktop            Miracle Window Manager Desktop                     no
+multimedia                   Multimedia                                         no
+mysql                        MariaDB (MySQL) Database                           no
+network-server               Network Servers                                    no
+networkmanager-submodules    Common NetworkManager Submodules                   no
+neuron-modelling-simulators  Neuron Modelling Simulators                        no
+news-server                  News Server                                        no
+ocaml                        OCaml                                              no
+office                       Office/Productivity                                no
+perl                         Perl Development                                   no
+perl-web                     Perl for Web                                       no
+phosh-desktop                A phone/tablet UX environment                      no
+php                          PHP                                                no
+platform-vmware              VMware Platform Support                            no
+printing                     Printing Support                                   no
+python-classroom             Python Classroom                                   no
+python-science               Python Science                                     no
+robotics-suite               Robotics                                           no
+rpm-development-tools        RPM Development Tools                              no
+ruby                         Ruby                                               no
+rubyonrails                  Ruby on Rails                                      no
+security-lab                 Security Lab                                       no
+server-cfg                   Server Configuration Tools                         no
+server-hardware-support      Hardware Support for Server Systems                no
+server-product               Fedora Server product core                         no
+smb-server                   Windows File Server                                no
+sound-and-video              Sound and Video                                    no
+sql-server                   PostgreSQL Database                                no
+standard                     Standard                                           no
+sugar-apps                   Additional Sugar Activities                        no
+sugar-desktop                Sugar Desktop Environment                          no
+swaywm                       Sway Window Manager                                no
+swaywm-extended              Sway Window Manager (supplemental packages)        no
+system-tools                 System Tools                                       no
+text-internet                Text-based Internet                                no
+tomcat                       Tomcat                                             no
+vagrant                      Vagrant with libvirt support                       no
+virtualization               Virtualization                                     no
+virtualization-headless      Headless Virtualization                            no
+vlc                          VideoLAN Client                                    no
+web-server                   Basic Web Server                                   no
+window-managers              Window Managers                                    no
+workstation-ostree-support   Fedora Workstation ostree support                  no
+workstation-product          Fedora Workstation product core                    no
+x-software-development       X Software Development                             no
+xfce-apps                    Applications for the Xfce Desktop                  no
+xfce-desktop                 Xfce                                               no
+xfce-extra-plugins           Extra plugins for the Xfce panel                   no
+xfce-media                   Multimedia support for Xfce                        no
+xfce-office                  Xfce Office                                        no
+xfce-software-development    Xfce Software Development                          no
+xmonad                       XMonad                                             no
+xmonad-mate                  XMonad for MATE                                    no
+'''
+
+'''
+dnf.conf
+exclude=dhcp-client,dracut-config-rescue,man-db,openssh-server,sssd-common,plymouth,parted,NetworkManager,firewalld,sssd-kcm
+
+sudo dnf group list --hidden --contains-pkgs basesystem
+
 https://github.com/Zer0CoolX/Fedora-KDE-Minimal-Install-Guide   
 
+'''
 
 
