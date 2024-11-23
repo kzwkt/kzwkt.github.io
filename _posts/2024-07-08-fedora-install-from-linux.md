@@ -336,6 +336,7 @@ or fixfiles -F onboot
 disalbe selinux enforcig on /etc/selinux/config or kernel parameter enforcing=0 before relabel
 
 ```
+hidden groups
 
 ```
 sudo dnf group list --hidden 
