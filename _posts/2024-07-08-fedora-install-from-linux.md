@@ -334,11 +334,12 @@ systemctl set-default graphical.target
 touch /.autorelabel
 or fixfiles -F onboot
 disalbe selinux enforcig on /etc/selinux/config or kernel parameter enforcing=0 before relabel
-
 ```
+
 hidden groups
 
 ```
+
 sudo dnf group list --hidden 
 Updating and loading repositories:
 Repositories loaded.
@@ -505,16 +506,19 @@ xfce-office                  Xfce Office                                        
 xfce-software-development    Xfce Software Development                          no
 xmonad                       XMonad                                             no
 xmonad-mate                  XMonad for MATE                                    no
-'''
+```
 
-'''
 dnf.conf
+```
 exclude=dhcp-client,dracut-config-rescue,man-db,openssh-server,sssd-common,plymouth,parted,NetworkManager,firewalld,sssd-kcm
-
+```
 sudo dnf group list --hidden --contains-pkgs basesystem
+
 
 https://github.com/Zer0CoolX/Fedora-KDE-Minimal-Install-Guide   
 
-'''
+
+
+
 
 
