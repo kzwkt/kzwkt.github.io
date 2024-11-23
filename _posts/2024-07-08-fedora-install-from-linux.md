@@ -67,6 +67,7 @@ cat /etc/rpm/macros.image-language-conf
 %_install_langs en_US
 
 
+
 glibc-langpack-en
 
  . /etc/profile.d/bash_completion.sh 
@@ -291,6 +292,9 @@ dnf --config /builddir/result/image/build/image-root/kiwi_dnf4.conf -y --install
 nano /etc/dnf/dnf.conf
 install_weak_deps=False
 clean_requirements_on_remove=True
+exclude=dhcp-client,dracut-config-rescue,man-db,openssh-server,sudo,firewalld
+override_install_langs=en_US.utf8
+
 
 
 kernel-install list
