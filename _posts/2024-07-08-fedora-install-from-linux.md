@@ -8,17 +8,18 @@ https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/41/Container/x86_64/images/
 tar xf Fedora-Container-Base-Generic-Minimal-41-1.4.x86_64.oci.tar.xz
 ```
  tar tvf Fedora-Container-Base-Generic-Minimal-41-1.4.x86_64.oci.tar.xz
-drwxr-xr-x 0/0               0 2024-04-14 22:54 blobs/
-drwxr-xr-x 0/0               0 2024-04-14 22:54 blobs/sha256/
--rw-r--r-- 0/0             504 2024-04-14 22:54 blobs/sha256/3c8d16bf007c7ce9873c9d4424e5e975f2cd1afb6875862505ae04116557ae80
--rw-r--r-- 0/0             834 2024-04-14 22:54 blobs/sha256/91acdb78ee162738b06a14823965580ebbc48e4eb3a4b4aad6bcdf4de6f7ecb5
--rw-r--r-- 0/0        46685693 2024-04-14 22:54 blobs/sha256/9d0aac0d3c97889a0fe94300a83f41d7dc3383d41e24c124604c310bd4053534
--rw-r--r-- 0/0             258 2024-04-14 22:54 index.json
--rw-r--r-- 0/0              30 2024-04-14 22:54 oci-layout
+drwxr-xr-x 0/0               0 2024-10-24 20:31 blobs/
+drwxr-xr-x 0/0               0 2024-10-24 20:31 blobs/sha256/
+-rw-r--r-- 0/0             504 2024-10-24 20:31 blobs/sha256/28e20d822db81517f4fbb67292bf23e1b17131d8b51605c262a02b9b898b24a4
+-rw-r--r-- 0/0        50701616 2024-10-24 20:31 blobs/sha256/32b07b9a22d03d120489b279e0d0764e2945a00b566e1de536fb232e718c4dc4
+-rw-r--r-- 0/0             858 2024-10-24 20:31 blobs/sha256/856c6718e99185c1e9d7d1ff9eac557283e0e49ecbfe362adfc5efa958550368
+-rw-r--r-- 0/0             258 2024-10-24 20:31 index.json
+-rw-r--r-- 0/0              30 2024-10-24 20:31 oci-layout
 ```
-sudo tar xvpf blobs/sha256/9d0aac0d3c97889a0fe94300a83f41d7dc3383d41e24c124604c310bd4053534 -C /mnt/  
+sudo tar xvpf blobs/sha256/32b07b9a22d03d120489b279e0d0764e2945a00b566e1de536fb232e718c4dc4 -C /mnt/  
 
-echo "nameserver 1.1.1.1"  > /mnt/etc/resolv.conf  
+# echo "nameserver 1.1.1.1"  >  /mnt/etc/resolv.conf  
+$ echo "nameserver 1.1.1.1"  | sudo tee /mnt/etc/resolv.conf  
 
 sudo bash chroot.sh  
 
@@ -58,6 +59,16 @@ Installing dependencies:
  pkgconf-m4                                                                        noarch            2.1.1-1.fc40                                                                        updates                                          13.9 KiB
  pkgconf-pkg-config                                                                x86_64            2.1.1-1.fc40                                                                        updates                                         989.0   B
 ```
+
+clean locale
+ sudo rm /usr/share/locale/!(en*|*alias)
+
+cat /etc/rpm/macros.image-language-conf 
+%_install_langs en_US
+
+
+glibc-langpack-en
+
  . /etc/profile.d/bash_completion.sh 
 <details>
 
