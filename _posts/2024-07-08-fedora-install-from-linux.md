@@ -1,12 +1,13 @@
 https://mirrormanager.fedoraproject.org/  
 
-https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/40/  
+https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/41/  
 
-https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/40/Container/x86_64/images/Fedora-Container-Base-Generic-Minimal.x86_64-40-1.14.oci.tar.xz  
+https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/41/Container/x86_64/images/Fedora-Container-Base-Generic-Minimal-41-1.4.x86_64.oci.tar.xz
 
-tar xf Fedora-Container-Base-Generic-Minimal.x86_64-40-1.14.oci.tar.xz  
+
+tar xf Fedora-Container-Base-Generic-Minimal-41-1.4.x86_64.oci.tar.xz
 ```
- tar tvf Fedora-Container-Base-Generic-Minimal.x86_64-40-1.14.oci.tar.xz 
+ tar tvf Fedora-Container-Base-Generic-Minimal-41-1.4.x86_64.oci.tar.xz
 drwxr-xr-x 0/0               0 2024-04-14 22:54 blobs/
 drwxr-xr-x 0/0               0 2024-04-14 22:54 blobs/sha256/
 -rw-r--r-- 0/0             504 2024-04-14 22:54 blobs/sha256/3c8d16bf007c7ce9873c9d4424e5e975f2cd1afb6875862505ae04116557ae80
