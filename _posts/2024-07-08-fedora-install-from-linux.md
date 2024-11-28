@@ -18,8 +18,8 @@ drwxr-xr-x 0/0               0 2024-10-24 20:31 blobs/sha256/
 ```
 sudo tar xvpf blobs/sha256/32b07b9a22d03d120489b279e0d0764e2945a00b566e1de536fb232e718c4dc4 -C /mnt/  
 
-# echo "nameserver 1.1.1.1"  >  /mnt/etc/resolv.conf  
-$ echo "nameserver 1.1.1.1"  | sudo tee /mnt/etc/resolv.conf  
+# echo nameserver 1.1.1.1  >  /mnt/etc/resolv.conf  
+$ echo nameserver 1.1.1.1  | sudo tee /mnt/etc/resolv.conf  
 
 sudo bash chroot.sh  
 
