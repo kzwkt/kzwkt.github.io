@@ -1,18 +1,23 @@
 
 # normal install from iso
+
 https://nixos.org/manual/nixos/stable/index.html#sec-installation
+
 https://nixos.wiki/wiki/Installing_from_Linux
+
 https://nixos.org/manual/nixos/stable/#sec-installing-from-other-distro
 
 
 # get nix 
+```
 sudo  mkdir /nix
 sudo  chown k /nix
 bash <(curl -L https://nixos.org/nix/install) 
-
+```
 
 
 nixos.org/manual/nix/stable/installation/installing-binary.html#multi-user-installation
+
 https://releases.nixos.org/?prefix=nix/
 
 
@@ -34,4 +39,21 @@ nix-channel --update
 
 nix-channel --remove nixpkgs
 
+
+ nix-env -f '<nixos>' -iA nixos-install-tools
+
+
+ make fs and mount target root to /mnt
+
+  sudo `which nixos-generate-config` --root /mnt
+
+ls /mnt/etc/nixos
+configuration.nix  hardware-configuration.nix
+
+
+
+https://nixos.org/manual/nixos/stable/options#opt-boot.loader.systemd-boot.enable
+
+
+  
 
