@@ -1,3 +1,4 @@
+```
 cat </dev/tcp/time.nist.gov/13
 
 60654 24-12-10 08:19:07 00 0 0 816.6 UTC(NIST) * 
@@ -24,3 +25,4 @@ echo "Time skew (offset): $skew ms"
 
 
 # we could get accuracy up to ms using %s%3N but network pings might be in ms 
+```
