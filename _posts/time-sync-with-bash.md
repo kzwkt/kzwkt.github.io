@@ -26,3 +26,7 @@ echo "Time skew (offset): $skew ms"
 
 # we could get accuracy up to ms using %s%3N but network pings might be in ms 
 ```
+
+sudo date -s @unixtime 
+
+to set time
