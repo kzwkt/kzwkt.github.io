@@ -55,5 +55,17 @@ configuration.nix  hardware-configuration.nix
 https://nixos.org/manual/nixos/stable/options#opt-boot.loader.systemd-boot.enable
 
 
+sudo groupadd -g 30000 nixbld
+
+sudo useradd -u 30000 -g nixbld -G nixbld nixbld
+
+cant run install reintall nix as root 
+
+# bash <(curl -L https://nixos.org/nix/install) --daemon
+
+nixos-install --root /mnt
+
+
+
   
 
