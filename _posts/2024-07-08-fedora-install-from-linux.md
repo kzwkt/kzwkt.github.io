@@ -515,6 +515,17 @@ exclude=dhcp-client,dracut-config-rescue,man-db,openssh-server,sssd-common,plymo
 sudo dnf group list --hidden --contains-pkgs basesystem
 
 
+avoid metatadata fetch for non root user 
+cat .config/dnf/dnf.conf 
+[main]
+metadata_timer_sync=0
+skip_if_unavailable=True
+
+
+user_cache_dir=/var/cache/libdnf5
+
+
+
 https://github.com/Zer0CoolX/Fedora-KDE-Minimal-Install-Guide   
 
 
